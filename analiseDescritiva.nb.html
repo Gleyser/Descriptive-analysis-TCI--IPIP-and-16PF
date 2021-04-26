@@ -1878,42 +1878,92 @@ freq(dados$Gender, order = &quot;freq&quot;, rows = 1:5, headings = FALSE, repor
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0ZyZXF1ZW5jaWEgXG5cbkFnZUdycCA8LSBhcy5jaGFyYWN0ZXIoY3V0KGRhZG9zJEFnZSwgYnJlYWtzPWMoMjAsMjUsMzAsMzUsNDAsSW5mKSxcbiAgICAgICAgICBsYWJlbHM9YygnMjAtMjUnLCAnMjYtMzAnLCAnMzEtMzUnLCAnMzYtNDAnLCAnT3ZlciA0MCcpKSlcblxud2l0aChkYWRvcywgc3RieShkYXRhID0gQWdlLCBJTkRJQ0VTID0gQWdlR3JwLCBcbiAgICAgICAgICAgICAgICAgICBGVU4gPSBkZXNjcikpXG5gYGAifQ== -->
-<pre class="r"><code>#Frequencia 
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0ZyZXF1ZW5jaWEgZGEgaWRhZGUgcG9yIGdydXBvc1xuXG5BZ2VHcnAgPC0gYXMuY2hhcmFjdGVyKGN1dChkYWRvcyRBZ2UsIGJyZWFrcz1jKDIwLDI1LDMwLDM1LDQwLEluZiksXG4gICAgICAgICAgbGFiZWxzPWMoJzIwLTI1JywgJzI2LTMwJywgJzMxLTM1JywgJzM2LTQwJywgJ092ZXIgNDAnKSkpXG5cbndpdGgoZGFkb3MsIHN0YnkoZGF0YSA9IEFnZSwgSU5ESUNFUyA9IEFnZUdycCwgXG4gICAgICAgICAgICAgICAgICAgRlVOID0gZGVzY3IpKVxuXG5gYGAifQ== -->
+<pre class="r"><code>#Frequencia da idade por grupos
 
 AgeGrp &lt;- as.character(cut(dados$Age, breaks=c(20,25,30,35,40,Inf),
           labels=c(&#39;20-25&#39;, &#39;26-30&#39;, &#39;31-35&#39;, &#39;36-40&#39;, &#39;Over 40&#39;)))
 
 with(dados, stby(data = Age, INDICES = AgeGrp, 
+                   FUN = descr))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0ZyZXF1ZW5jaWEgZGEgeHAgcG9zIGdyYWR1YWRvIHBvciBncnVwb3NcblxuUG9zR3JhZHVhdGVHcnAgPC0gYXMuY2hhcmFjdGVyKGN1dChkYWRvcyR4cFBvc0dyYWR1YXRlLCBicmVha3M9YygwLDMsNiwxMCwxNCxJbmYpLFxuICAgICAgICAgIGxhYmVscz1jKCcwLTMnLCAnNC02JywgJzctMTAnLCAnMTEtMTQnLCAnT3ZlciAxNCcpKSlcblxud2l0aChkYWRvcywgc3RieShkYXRhID0gQWdlLCBJTkRJQ0VTID0gUG9zR3JhZHVhdGVHcnAsIFxuICAgICAgICAgICAgICAgICAgIEZVTiA9IGRlc2NyKSlcblxuYGBgIn0= -->
+<pre class="r"><code>#Frequencia da xp pos graduado por grupos
+
+PosGraduateGrp &lt;- as.character(cut(dados$xpPosGraduate, breaks=c(0,3,6,10,14,Inf),
+          labels=c(&#39;0-3&#39;, &#39;4-6&#39;, &#39;7-10&#39;, &#39;11-14&#39;, &#39;Over 14&#39;)))
+
+with(dados, stby(data = Age, INDICES = PosGraduateGrp, 
+                   FUN = descr))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0ZyZXF1ZW5jaWEgZGEgeHAgcG9zIGdyYWR1YWRvIG5vIHZpcnR1cyBwb3IgZ3J1cG9zXG5cblBvc0dyYWR1YXRlR3JwVmlydHVzIDwtIGFzLmNoYXJhY3RlcihjdXQoZGFkb3MkeHBQb3NHcmFkdWF0ZWRWaXJ0dXMsIGJyZWFrcz1jKDAsMyw2LDEwLDE0LEluZiksXG4gICAgICAgICAgbGFiZWxzPWMoJzAtMycsICc0LTYnLCAnNy0xMCcsICcxMS0xNCcsICdPdmVyIDE0JykpKVxuXG53aXRoKGRhZG9zLCBzdGJ5KGRhdGEgPSBBZ2UsIElORElDRVMgPSBQb3NHcmFkdWF0ZUdycFZpcnR1cywgXG4gICAgICAgICAgICAgICAgICAgRlVOID0gZGVzY3IpKVxuYGBgIn0= -->
+<pre class="r"><code>#Frequencia da xp pos graduado no virtus por grupos
+
+PosGraduateGrpVirtus &lt;- as.character(cut(dados$xpPosGraduatedVirtus, breaks=c(0,3,6,10,14,Inf),
+          labels=c(&#39;0-3&#39;, &#39;4-6&#39;, &#39;7-10&#39;, &#39;11-14&#39;, &#39;Over 14&#39;)))
+
+with(dados, stby(data = Age, INDICES = PosGraduateGrpVirtus, 
                    FUN = descr))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRGVzY3JpcHRpdmUgU3RhdGlzdGljcyAgXG5BZ2UgYnkgQWdlR3JwICBcbkRhdGEgRnJhbWU6IGRhZG9zICBcbk46IDQyICBcblxuICAgICAgICAgICAgICAgICAgICAgMjAtMjUgICAgMjYtMzAgICAgMzEtMzUgICAgMzYtNDAgICBPdmVyIDQwXG4tLS0tLS0tLS0tLS0tLS0tLSAtLS0tLS0tLSAtLS0tLS0tLSAtLS0tLS0tLSAtLS0tLS0tLSAtLS0tLS0tLS1cbiAgICAgICAgICAgICBNZWFuICAgIDI0LjA1ICAgIDI3LjkzICAgIDMyLjQ0ICAgIDM3LjE3ICAgICA0NS4zM1xuICAgICAgICAgIFN0ZC5EZXYgICAgIDAuOTYgICAgIDEuNTAgICAgIDEuNDkgICAgIDEuNDcgICAgICAwLjU4XG4gICAgICAgICAgICAgIE1pbiAgICAyMi4wMCAgICAyNi4wMCAgICAzMS4wMCAgICAzNi4wMCAgICAgNDUuMDBcbiAgICAgICAgICAgICAgIFExICAgIDIzLjAwICAgIDI3LjAwICAgIDMxLjAwICAgIDM2LjAwICAgICA0NS4wMFxuICAgICAgICAgICBNZWRpYW4gICAgMjQuMDAgICAgMjguMDAgICAgMzIuMDAgICAgMzcuMDAgICAgIDQ1LjAwXG4gICAgICAgICAgICAgICBRMyAgICAyNS4wMCAgICAyOS4wMCAgICAzMy4wMCAgICAzNy41MCAgICAgNDYuMDBcbiAgICAgICAgICAgICAgTWF4ICAgIDI1LjAwICAgIDMwLjAwICAgIDM1LjAwICAgIDQwLjAwICAgICA0Ni4wMFxuICAgICAgICAgICAgICBNQUQgICAgIDEuNDggICAgIDEuNDggICAgIDEuNDggICAgIDEuNDggICAgICAwLjAwXG4gICAgICAgICAgICAgIElRUiAgICAgMi4wMCAgICAgMi4wMCAgICAgMi4wMCAgICAgMS4yNSAgICAgIDAuNTBcbiAgICAgICAgICAgICAgIENWICAgICAwLjA0ICAgICAwLjA1ICAgICAwLjA1ICAgICAwLjA0ICAgICAgMC4wMVxuICAgICAgICAgU2tld25lc3MgICAgLTAuMjUgICAgIDAuMTEgICAgIDAuNjYgICAgIDEuMDEgICAgICAwLjM4XG4gICAgICBTRS5Ta2V3bmVzcyAgICAgMC4zNyAgICAgMC4zNSAgICAgMC4zNCAgICAgMC42NCAgICAgIDEuMjJcbiAgICAgICAgIEt1cnRvc2lzICAgIC0xLjU3ICAgIC0xLjUwICAgIC0xLjAyICAgIC0wLjUwICAgICAtMi4zM1xuICAgICAgICAgIE4uVmFsaWQgICAgNDIuMDAgICAgNDUuMDAgICAgNTAuMDAgICAgMTIuMDAgICAgICAzLjAwXG4gICAgICAgIFBjdC5WYWxpZCAgIDEwMC4wMCAgIDEwMC4wMCAgIDEwMC4wMCAgIDEwMC4wMCAgICAxMDAuMDBcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiRGVzY3JpcHRpdmUgU3RhdGlzdGljcyAgXG5BZ2UgYnkgUG9zR3JhZHVhdGVHcnBWaXJ0dXMgIFxuRGF0YSBGcmFtZTogZGFkb3MgIFxuTjogODYgIFxuXG4gICAgICAgICAgICAgICAgICAgICAgIDAtMyAgICAgIDQtNiAgICAgNy0xMFxuLS0tLS0tLS0tLS0tLS0tLS0gLS0tLS0tLS0gLS0tLS0tLS0gLS0tLS0tLS1cbiAgICAgICAgICAgICBNZWFuICAgIDI4LjI4ICAgIDMxLjMzICAgIDM0Ljc4XG4gICAgICAgICAgU3RkLkRldiAgICAgNC40NyAgICAgMy4zMiAgICAgNC4xOFxuICAgICAgICAgICAgICBNaW4gICAgMjIuMDAgICAgMjUuMDAgICAgMzEuMDBcbiAgICAgICAgICAgICAgIFExICAgIDI1LjAwICAgIDI5LjAwICAgIDMyLjAwXG4gICAgICAgICAgIE1lZGlhbiAgICAyNy4wMCAgICAzMS4wMCAgICAzNC4wMFxuICAgICAgICAgICAgICAgUTMgICAgMzEuMDAgICAgMzMuMDAgICAgMzUuMDBcbiAgICAgICAgICAgICAgTWF4ICAgIDQ1LjAwICAgIDQwLjAwICAgIDQ1LjAwXG4gICAgICAgICAgICAgIE1BRCAgICAgNC40NSAgICAgMi45NyAgICAgMi45N1xuICAgICAgICAgICAgICBJUVIgICAgIDYuMDAgICAgIDQuMDAgICAgIDMuMDBcbiAgICAgICAgICAgICAgIENWICAgICAwLjE2ICAgICAwLjExICAgICAwLjEyXG4gICAgICAgICBTa2V3bmVzcyAgICAgMS4wMSAgICAgMC41NyAgICAgMS40N1xuICAgICAgU0UuU2tld25lc3MgICAgIDAuMjYgICAgIDAuMzYgICAgIDAuNzJcbiAgICAgICAgIEt1cnRvc2lzICAgICAwLjk0ICAgICAwLjMwICAgICAxLjExXG4gICAgICAgICAgTi5WYWxpZCAgICA4Ni4wMCAgICA0My4wMCAgICAgOS4wMFxuICAgICAgICBQY3QuVmFsaWQgICAxMDAuMDAgICAxMDAuMDAgICAxMDAuMDBcbiJ9 -->
 <pre><code>Descriptive Statistics  
-Age by AgeGrp  
+Age by PosGraduateGrpVirtus  
 Data Frame: dados  
-N: 42  
+N: 86  
 
-                     20-25    26-30    31-35    36-40   Over 40
------------------ -------- -------- -------- -------- ---------
-             Mean    24.05    27.93    32.44    37.17     45.33
-          Std.Dev     0.96     1.50     1.49     1.47      0.58
-              Min    22.00    26.00    31.00    36.00     45.00
-               Q1    23.00    27.00    31.00    36.00     45.00
-           Median    24.00    28.00    32.00    37.00     45.00
-               Q3    25.00    29.00    33.00    37.50     46.00
-              Max    25.00    30.00    35.00    40.00     46.00
-              MAD     1.48     1.48     1.48     1.48      0.00
-              IQR     2.00     2.00     2.00     1.25      0.50
-               CV     0.04     0.05     0.05     0.04      0.01
-         Skewness    -0.25     0.11     0.66     1.01      0.38
-      SE.Skewness     0.37     0.35     0.34     0.64      1.22
-         Kurtosis    -1.57    -1.50    -1.02    -0.50     -2.33
-          N.Valid    42.00    45.00    50.00    12.00      3.00
-        Pct.Valid   100.00   100.00   100.00   100.00    100.00</code></pre>
+                       0-3      4-6     7-10
+----------------- -------- -------- --------
+             Mean    28.28    31.33    34.78
+          Std.Dev     4.47     3.32     4.18
+              Min    22.00    25.00    31.00
+               Q1    25.00    29.00    32.00
+           Median    27.00    31.00    34.00
+               Q3    31.00    33.00    35.00
+              Max    45.00    40.00    45.00
+              MAD     4.45     2.97     2.97
+              IQR     6.00     4.00     3.00
+               CV     0.16     0.11     0.12
+         Skewness     1.01     0.57     1.47
+      SE.Skewness     0.26     0.36     0.72
+         Kurtosis     0.94     0.30     1.11
+          N.Valid    86.00    43.00     9.00
+        Pct.Valid   100.00   100.00   100.00</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0ZyZXF1ZW5jaWEgUm9sZVxuXG5mcmVxKGRhZG9zJFJvbGUsIG9yZGVyID0gXCJmcmVxXCIsIHJvd3MgPSAxOjUsIGhlYWRpbmdzID0gRkFMU0UsIHJlcG9ydC5uYXMgPSBGQUxTRSwgdG90YWxzID0gRkFMU0UpXG5gYGAifQ== -->
+<pre class="r"><code>#Frequencia Role
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShicm9vbSkNCmxpYnJhcnkobW9kZWxyKQ0KbGlicmFyeShoZXJlKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShyZXNoYXBlMikNCmxpYnJhcnkoZ3JpZCkNCmxpYnJhcnkoIkdHYWxseSIpDQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkocHN5Y2gpDQpsaWJyYXJ5KHN1bW1hcnl0b29scykNCnRoZW1lX3NldCh0aGVtZV9idygpKQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KDQoNCmBgYA0KDQpgYGB7ciBFVEx9DQpkYWRvcyA9IHJlYWRfY3N2KGhlcmU6OmhlcmUoIklQSVAtVENJLVN1YmplY3RzX2ZpbmFsLmNzdiIpKSANCg0KY29scygNCiAgY29kaWdvU0hBID0gY29sX2NoYXJhY3RlcigpLA0KICBwcm9qZXRvQXR1YWwgPSBjb2xfY2hhcmFjdGVyKCksDQogIFJvbGUgPSBjb2xfY2hhcmFjdGVyKCksDQogIHhwUG9zR3JhZHVhdGUgPSBjb2xfZG91YmxlKCksDQogIHhwUG9zR3JhZHVhdGVkVmlydHVzID0gY29sX2RvdWJsZSgpLA0KICBBZ2UgPSBjb2xfZG91YmxlKCksDQogIEdlbmRlciA9IGNvbF9jaGFyYWN0ZXIoKSwNCiAgdGNpX1RlYW1WaXNpb24gPSBjb2xfZG91YmxlKCksDQogIHRjaV9UYXNrT3JpZW50YXRpb24gPSBjb2xfZG91YmxlKCksDQogIHRjaV9TdXBwb3J0Rm9ySW5vdmF0aW9uID0gY29sX2RvdWJsZSgpLA0KICB0Y2lfUGFydGljaXBhdGl2ZVNhZmV0eSA9IGNvbF9kb3VibGUoKSwNCiAgaXB0YyA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9FeHRyYXZlcnNpb24gPSBjb2xfZG91YmxlKCksDQogIGlwaXBfQWdyZWVhYmxlbmVzcyA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9Db25zY2llbnRpb3VzbmVzcyA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9OZXVyb3RpY2lzbSA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9PcGVubmVzcyA9IGNvbF9kb3VibGUoKQ0KKQ0KDQpgYGANCg0KDQpgYGB7cn0NCg0KI3BzeWNoOjpkZXNjcmliZShkYWRvcykNCg0KI03DqWRpYSwgTWVkaWFuYSwgRGVzdmlvIHBhZHLDo28sIGNvZWZpY2llbnRlIGRlIHZhcmlhw6fDo28sIG1pbmltbyBlIG3DoXhpbW8NCmRlc2NyKGRhZG9zLCBzdGF0cyA9IGMoIm1lYW4iLCAibWVkIiwgInNkIiwgImN2IiwgIm1pbiIsICJtYXgiKSwgdHJhbnNwb3NlID0gVFJVRSkNCg0KYGBgDQoNCmBgYHtyfQ0KI0ZyZXF1ZW5jaWEgTWFzY3VsaW5vIGUgRmVtaW5vDQoNCmZyZXEoZGFkb3MkR2VuZGVyLCBvcmRlciA9ICJmcmVxIiwgcm93cyA9IDE6NSwgaGVhZGluZ3MgPSBGQUxTRSwgcmVwb3J0Lm5hcyA9IEZBTFNFLCB0b3RhbHMgPSBGQUxTRSkNCg0KYGBgDQoNCmBgYHtyfQ0KI0ZyZXF1ZW5jaWEgZGEgaWRhZGUgcG9yIGdydXBvcw0KDQpBZ2VHcnAgPC0gYXMuY2hhcmFjdGVyKGN1dChkYWRvcyRBZ2UsIGJyZWFrcz1jKDIwLDI1LDMwLDM1LDQwLEluZiksDQogICAgICAgICAgbGFiZWxzPWMoJzIwLTI1JywgJzI2LTMwJywgJzMxLTM1JywgJzM2LTQwJywgJ092ZXIgNDAnKSkpDQoNCndpdGgoZGFkb3MsIHN0YnkoZGF0YSA9IEFnZSwgSU5ESUNFUyA9IEFnZUdycCwgDQogICAgICAgICAgICAgICAgICAgRlVOID0gZGVzY3IpKQ0KDQpgYGA=</div>
+freq(dados$Role, order = &quot;freq&quot;, rows = 1:5, headings = FALSE, report.nas = FALSE, totals = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRnJlcSAgICAgICAlICAgJSBDdW0uXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tLS0tLSAtLS0tLS0tIC0tLS0tLS0tXG4gICAgICAgICAgICAgICAgICAgICBEZXNlbnZvbHZlZG9yICAgICA2NSAgIDQyLjc2ICAgIDQyLjc2XG4gICAgICAgICAgICAgICAgICAgICAgICAgIFRlc3RhZG9yICAgICA0NCAgIDI4Ljk1ICAgIDcxLjcxXG4gICAgICAgICAgICAgICAgR2VyZW50ZSBkZSBQcm9qZXRvICAgICAxNCAgICA5LjIxICAgIDgwLjkyXG4gICAgICBFc3BlY2lhbGlzdGEgLyBMw61kZXIgdMOpY25pY28gICAgIDEzICAgIDguNTUgICAgODkuNDdcbiAgICAgICAgICAgICAgICAgICAgICBTY3J1bSBtYXN0ZXIgICAgICA0ICAgIDIuNjMgICAgOTIuMTFcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIChPdGhlcikgICAgIDEyICAgIDcuODkgICAxMDAuMDBcbiJ9 -->
+<pre><code>
+                                     Freq       %   % Cum.
+---------------------------------- ------ ------- --------
+                     Desenvolvedor     65   42.76    42.76
+                          Testador     44   28.95    71.71
+                Gerente de Projeto     14    9.21    80.92
+      Especialista / Líder técnico     13    8.55    89.47
+                      Scrum master      4    2.63    92.11
+                           (Other)     12    7.89   100.00</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShicm9vbSkNCmxpYnJhcnkobW9kZWxyKQ0KbGlicmFyeShoZXJlKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShyZXNoYXBlMikNCmxpYnJhcnkoZ3JpZCkNCmxpYnJhcnkoIkdHYWxseSIpDQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkocHN5Y2gpDQpsaWJyYXJ5KHN1bW1hcnl0b29scykNCnRoZW1lX3NldCh0aGVtZV9idygpKQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KDQoNCmBgYA0KDQpgYGB7ciBFVEx9DQpkYWRvcyA9IHJlYWRfY3N2KGhlcmU6OmhlcmUoIklQSVAtVENJLVN1YmplY3RzX2ZpbmFsLmNzdiIpKSANCg0KY29scygNCiAgY29kaWdvU0hBID0gY29sX2NoYXJhY3RlcigpLA0KICBwcm9qZXRvQXR1YWwgPSBjb2xfY2hhcmFjdGVyKCksDQogIFJvbGUgPSBjb2xfY2hhcmFjdGVyKCksDQogIHhwUG9zR3JhZHVhdGUgPSBjb2xfZG91YmxlKCksDQogIHhwUG9zR3JhZHVhdGVkVmlydHVzID0gY29sX2RvdWJsZSgpLA0KICBBZ2UgPSBjb2xfZG91YmxlKCksDQogIEdlbmRlciA9IGNvbF9jaGFyYWN0ZXIoKSwNCiAgdGNpX1RlYW1WaXNpb24gPSBjb2xfZG91YmxlKCksDQogIHRjaV9UYXNrT3JpZW50YXRpb24gPSBjb2xfZG91YmxlKCksDQogIHRjaV9TdXBwb3J0Rm9ySW5vdmF0aW9uID0gY29sX2RvdWJsZSgpLA0KICB0Y2lfUGFydGljaXBhdGl2ZVNhZmV0eSA9IGNvbF9kb3VibGUoKSwNCiAgaXB0YyA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9FeHRyYXZlcnNpb24gPSBjb2xfZG91YmxlKCksDQogIGlwaXBfQWdyZWVhYmxlbmVzcyA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9Db25zY2llbnRpb3VzbmVzcyA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9OZXVyb3RpY2lzbSA9IGNvbF9kb3VibGUoKSwNCiAgaXBpcF9PcGVubmVzcyA9IGNvbF9kb3VibGUoKQ0KKQ0KDQpgYGANCg0KDQpgYGB7cn0NCg0KI3BzeWNoOjpkZXNjcmliZShkYWRvcykNCg0KI03DqWRpYSwgTWVkaWFuYSwgRGVzdmlvIHBhZHLDo28sIGNvZWZpY2llbnRlIGRlIHZhcmlhw6fDo28sIG1pbmltbyBlIG3DoXhpbW8NCmRlc2NyKGRhZG9zLCBzdGF0cyA9IGMoIm1lYW4iLCAibWVkIiwgInNkIiwgImN2IiwgIm1pbiIsICJtYXgiKSwgdHJhbnNwb3NlID0gVFJVRSkNCg0KYGBgDQoNCmBgYHtyfQ0KI0ZyZXF1ZW5jaWEgTWFzY3VsaW5vIGUgRmVtaW5vDQoNCmZyZXEoZGFkb3MkR2VuZGVyLCBvcmRlciA9ICJmcmVxIiwgcm93cyA9IDE6NSwgaGVhZGluZ3MgPSBGQUxTRSwgcmVwb3J0Lm5hcyA9IEZBTFNFLCB0b3RhbHMgPSBGQUxTRSkNCg0KYGBgDQoNCmBgYHtyfQ0KI0ZyZXF1ZW5jaWEgZGEgaWRhZGUgcG9yIGdydXBvcw0KDQpBZ2VHcnAgPC0gYXMuY2hhcmFjdGVyKGN1dChkYWRvcyRBZ2UsIGJyZWFrcz1jKDIwLDI1LDMwLDM1LDQwLEluZiksDQogICAgICAgICAgbGFiZWxzPWMoJzIwLTI1JywgJzI2LTMwJywgJzMxLTM1JywgJzM2LTQwJywgJ092ZXIgNDAnKSkpDQoNCndpdGgoZGFkb3MsIHN0YnkoZGF0YSA9IEFnZSwgSU5ESUNFUyA9IEFnZUdycCwgDQogICAgICAgICAgICAgICAgICAgRlVOID0gZGVzY3IpKQ0KDQpgYGANCg0KYGBge3J9DQojRnJlcXVlbmNpYSBkYSB4cCBwb3MgZ3JhZHVhZG8gcG9yIGdydXBvcw0KDQpQb3NHcmFkdWF0ZUdycCA8LSBhcy5jaGFyYWN0ZXIoY3V0KGRhZG9zJHhwUG9zR3JhZHVhdGUsIGJyZWFrcz1jKDAsMyw2LDEwLDE0LEluZiksDQogICAgICAgICAgbGFiZWxzPWMoJzAtMycsICc0LTYnLCAnNy0xMCcsICcxMS0xNCcsICdPdmVyIDE0JykpKQ0KDQp3aXRoKGRhZG9zLCBzdGJ5KGRhdGEgPSBBZ2UsIElORElDRVMgPSBQb3NHcmFkdWF0ZUdycCwgDQogICAgICAgICAgICAgICAgICAgRlVOID0gZGVzY3IpKQ0KDQpgYGANCg0KDQpgYGB7cn0NCiNGcmVxdWVuY2lhIGRhIHhwIHBvcyBncmFkdWFkbyBubyB2aXJ0dXMgcG9yIGdydXBvcw0KDQpQb3NHcmFkdWF0ZUdycFZpcnR1cyA8LSBhcy5jaGFyYWN0ZXIoY3V0KGRhZG9zJHhwUG9zR3JhZHVhdGVkVmlydHVzLCBicmVha3M9YygwLDMsNiwxMCwxNCxJbmYpLA0KICAgICAgICAgIGxhYmVscz1jKCcwLTMnLCAnNC02JywgJzctMTAnLCAnMTEtMTQnLCAnT3ZlciAxNCcpKSkNCg0Kd2l0aChkYWRvcywgc3RieShkYXRhID0gQWdlLCBJTkRJQ0VTID0gUG9zR3JhZHVhdGVHcnBWaXJ0dXMsIA0KICAgICAgICAgICAgICAgICAgIEZVTiA9IGRlc2NyKSkNCg0KYGBgDQoNCmBgYHtyfQ0KI0ZyZXF1ZW5jaWEgUm9sZQ0KDQpmcmVxKGRhZG9zJFJvbGUsIG9yZGVyID0gImZyZXEiLCByb3dzID0gMTo1LCBoZWFkaW5ncyA9IEZBTFNFLCByZXBvcnQubmFzID0gRkFMU0UsIHRvdGFscyA9IEZBTFNFKQ0KDQpgYGANCg0K</div>
 
 
 

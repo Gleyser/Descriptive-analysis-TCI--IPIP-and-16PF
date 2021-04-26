@@ -73,3 +73,34 @@ with(dados, stby(data = Age, INDICES = AgeGrp,
                    FUN = descr))
 
 ```
+
+```{r}
+#Frequencia da xp pos graduado por grupos
+
+PosGraduateGrp <- as.character(cut(dados$xpPosGraduate, breaks=c(0,3,6,10,14,Inf),
+          labels=c('0-3', '4-6', '7-10', '11-14', 'Over 14')))
+
+with(dados, stby(data = Age, INDICES = PosGraduateGrp, 
+                   FUN = descr))
+
+```
+
+
+```{r}
+#Frequencia da xp pos graduado no virtus por grupos
+
+PosGraduateGrpVirtus <- as.character(cut(dados$xpPosGraduatedVirtus, breaks=c(0,3,6,10,14,Inf),
+          labels=c('0-3', '4-6', '7-10', '11-14', 'Over 14')))
+
+with(dados, stby(data = Age, INDICES = PosGraduateGrpVirtus, 
+                   FUN = descr))
+
+```
+
+```{r}
+#Frequencia Role
+
+freq(dados$Role, order = "freq", rows = 1:5, headings = FALSE, report.nas = FALSE, totals = FALSE)
+
+```
+
