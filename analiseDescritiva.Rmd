@@ -57,6 +57,11 @@ descr(dados, stats = c("mean", "med", "sd", "cv", "min", "max"), transpose = TRU
 ```
 
 ```{r}
+#descricao summary
+dfSummary(dados)
+```
+
+```{r}
 #Frequencia Masculino e Femino
 
 freq(dados$Gender, order = "freq", rows = 1:5, headings = FALSE, report.nas = FALSE, totals = FALSE)
@@ -103,4 +108,5 @@ with(dados, stby(data = Age, INDICES = PosGraduateGrpVirtus,
 freq(dados$Role, order = "freq", rows = 1:5, headings = FALSE, report.nas = FALSE, totals = FALSE)
 
 ```
+
 
