@@ -1,0 +1,19 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(broom)
+library(modelr)
+library(here)
+library(ggplot2)
+library(reshape2)
+library(grid)
+library("GGally")
+theme_set(theme_bw())
+knitr::opts_chunk$set(echo = TRUE)
+
+
+```
