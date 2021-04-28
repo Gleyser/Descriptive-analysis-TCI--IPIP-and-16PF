@@ -57,7 +57,7 @@ descr(dados, stats = c("mean", "med", "sd", "cv", "min", "max"), transpose = TRU
 ```
 
 ```{r}
-#descricao summary
+#summary
 dfSummary(dados)
 ```
 
@@ -108,5 +108,86 @@ with(dados, stby(data = Age, INDICES = PosGraduateGrpVirtus,
 freq(dados$Role, order = "freq", rows = 1:5, headings = FALSE, report.nas = FALSE, totals = FALSE)
 
 ```
+
+```{r}
+boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+#boxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+abline(h=1,col="red",lty=2)
+abline(h=2,col="red",lty=2)
+abline(h=3,col="red",lty=2)
+abline(h=4,col="red",lty=2)
+abline(h=5,col="red",lty=2)
+
+
+```
+```{r}
+#boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+boxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+abline(h=1,col="red",lty=2)
+abline(h=2,col="red",lty=2)
+abline(h=3,col="red",lty=2)
+abline(h=4,col="red",lty=2)
+abline(h=5,col="red",lty=2)
+
+```
+```{r}
+#boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+#bboxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+#babline(h=1,col="red",lty=2)
+#babline(h=2,col="red",lty=2)
+#babline(h=3,col="red",lty=2)
+#babline(h=4,col="red",lty=2)
+#babline(h=5,col="red",lty=2)
+
+mar.orig <- par()$mar
+par(mar=c(9,5,3,0))
+boxplot(dados$tci_TeamVision, dados$tci_TaskOrientation, dados$tci_SupportForInovation, dados$tci_ParticipativeSafety,
+main = "Team climate factors’ scores",
+names = c("Vision", "Task Orientation", "Support for Inovation", "Participative Safety"),
+las = 1,
+xlim = c(0, 7),
+ylim = c(0, 5),
+at = c(0.5, 2.5, 4.5, 6.5),
+ylab = "Score of team climate factor"
+
+)
+
+abline(h=1,col="red",lty=2)
+abline(h=2,col="red",lty=2)
+abline(h=3,col="red",lty=2)
+abline(h=4,col="red",lty=2)
+abline(h=5,col="red",lty=2)
+#par(mar = mar.orig)
+```
+```{r}
+#boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+#bboxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+#babline(h=1,col="red",lty=2)
+#babline(h=2,col="red",lty=2)
+#babline(h=3,col="red",lty=2)
+#babline(h=4,col="red",lty=2)
+#babline(h=5,col="red",lty=2)
+
+mar.orig <- par()$mar
+par(mar=c(9,5,3,0))
+boxplot(dados$ipip_Extraversion, dados$ipip_Agreeableness, dados$ipip_Conscientiousness, dados$ipip_Neuroticism,dados$ipip_Openness,
+main = "Personality traits’ scores",
+names = c("Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "Openness"),
+las = 1,
+xlim = c(0, 9),
+ylim = c(0, 100),
+at = c(0.5, 2.5, 4.5, 6.5, 8.5),
+ylab = "Score of personality trait"
+
+)
+
+abline(h=30,col="red",lty=2)
+abline(h=70,col="red",lty=2)
+
+#par(mar = mar.orig)
+```
+
+
+
 
 
