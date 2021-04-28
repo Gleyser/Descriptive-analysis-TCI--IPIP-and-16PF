@@ -145,9 +145,9 @@ boxplot(dados$tci_TeamVision, dados$tci_TaskOrientation, dados$tci_SupportForIno
 main = "Team climate factors’ scores",
 names = c("Vision", "Task Orientation", "Support for Inovation", "Participative Safety"),
 las = 1,
-xlim = c(0, 7),
+xlim = c(0, 9),
 ylim = c(0, 5),
-at = c(0.5, 2.5, 4.5, 6.5),
+at = c(0.5, 3, 5.5, 8),
 ylab = "Score of team climate factor"
 
 )
@@ -174,9 +174,9 @@ boxplot(dados$ipip_Extraversion, dados$ipip_Agreeableness, dados$ipip_Conscienti
 main = "Personality traits’ scores",
 names = c("Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "Openness"),
 las = 1,
-xlim = c(0, 9),
+xlim = c(0, 10),
 ylim = c(0, 100),
-at = c(0.5, 2.5, 4.5, 6.5, 8.5),
+at = c(0.5, 2.5, 5, 7.5, 9.5),
 ylab = "Score of personality trait"
 
 )
