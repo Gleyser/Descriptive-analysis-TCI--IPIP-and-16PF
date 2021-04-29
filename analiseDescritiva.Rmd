@@ -15,6 +15,8 @@ library("GGally")
 library(tidyverse)
 library(psych)
 library(summarytools)
+library("dplyr")
+library("ggpubr")
 theme_set(theme_bw())
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -186,8 +188,111 @@ abline(h=70,col="red",lty=2)
 
 #par(mar = mar.orig)
 ```
+```{r}
+#Density plot - TCI
 
 
+ggdensity(dados$tci_TeamVision, main = "Density plot of tci_TeamVision",
+          xlab = "tci_TeamVision")
+
+ggdensity(dados$tci_TaskOrientation, main = "Density plot of tci_TaskOrientation",
+          xlab = "tci_TaskOrientation")
+
+ggdensity(dados$tci_SupportForInovation, main = "Density plot of tci_SupportForInovation",
+          xlab = "tci_SupportForInovation")
+
+ggdensity(dados$tci_ParticipativeSafety, main = "Density plot of tci_ParticipativeSafety",
+          xlab = "tci_ParticipativeSafety")
+
+ggdensity(dados$iptc, main = "Density plot of iptc",
+          xlab = "iptc")
+```
+```{r}
+#Q-Q plot - TCI
+
+
+ggqqplot(dados$tci_TeamVision, main = "Density plot of tci_TeamVision",
+          xlab = "tci_TeamVision")
+
+ggqqplot(dados$tci_TaskOrientation, main = "Density plot of tci_TaskOrientation",
+          xlab = "tci_TaskOrientation")
+
+ggqqplot(dados$tci_SupportForInovation, main = "Density plot of tci_SupportForInovation",
+          xlab = "tci_SupportForInovation")
+
+ggqqplot(dados$tci_ParticipativeSafety, main = "Density plot of tci_ParticipativeSafety",
+          xlab = "tci_ParticipativeSafety")
+
+ggqqplot(dados$iptc, main = "Density plot of iptc",
+          xlab = "iptc")
+```
+```{r}
+#Shapiro-Wilk’s test
+
+
+shapiro.test(dados$tci_TeamVision)
+
+shapiro.test(dados$tci_TaskOrientation)
+
+shapiro.test(dados$tci_SupportForInovation)
+
+shapiro.test(dados$tci_ParticipativeSafety)
+
+shapiro.test(dados$iptc)
+```
+```{r}
+#Density plot - IPIP
+
+
+ggdensity(dados$ipip_Extraversion, main = "Density plot of ipip_Extraversion",
+          xlab = "ipip_Extraversion")
+
+ggdensity(dados$ipip_Agreeableness, main = "Density plot of ipip_Agreeableness",
+          xlab = "ipip_Agreeableness")
+
+ggdensity(dados$ipip_Conscientiousness, main = "Density plot of ipip_Conscientiousness",
+          xlab = "ipip_Conscientiousness")
+
+ggdensity(dados$ipip_Neuroticism, main = "Density plot of ipip_Neuroticism",
+          xlab = "ipip_Neuroticism")
+
+ggdensity(dados$ipip_Openness, main = "Density plot of ipip_Openness",
+          xlab = "ipip_Openness")
+```
+```{r}
+#Q-Q plot - IPIP
+
+
+ggqqplot(dados$ipip_Extraversion, main = "Density plot of ipip_Extraversion",
+          xlab = "ipip_Extraversion")
+
+ggqqplot(dados$ipip_Agreeableness, main = "Density plot of ipip_Agreeableness",
+          xlab = "ipip_Agreeableness")
+
+ggqqplot(dados$ipip_Conscientiousness, main = "Density plot of ipip_Conscientiousness",
+          xlab = "ipip_Conscientiousness")
+
+ggqqplot(dados$ipip_Neuroticism, main = "Density plot of ipip_Neuroticism",
+          xlab = "ipip_Neuroticism")
+
+ggqqplot(dados$ipip_Openness, main = "Density plot of ipip_Openness",
+          xlab = "ipip_Openness")
+```
+
+```{r}
+#Shapiro-Wilk’s test
+
+
+shapiro.test(dados$ipip_Extraversion)
+
+shapiro.test(dados$ipip_Agreeableness)
+
+shapiro.test(dados$ipip_Conscientiousness)
+
+shapiro.test(dados$ipip_Neuroticism)
+
+shapiro.test(dados$ipip_Openness)
+```
 
 
 
