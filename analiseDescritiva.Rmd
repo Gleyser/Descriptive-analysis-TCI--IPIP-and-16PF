@@ -133,6 +133,19 @@ abline(h=5,col="red",lty=2)
 
 ```
 ```{r}
+#boxplot(dados$ , xlim = c(0, 2), ylim = c(0, 5))
+boxplot(dados$iptc, xlim = c(0, 2), ylim = c(0, 5))
+abline(h=1,col="red",lty=2)
+abline(h=2,col="red",lty=2)
+abline(h=3,col="red",lty=2)
+abline(h=4,col="red",lty=2)
+abline(h=5,col="red",lty=2)
+
+
+
+
+```
+```{r}
 #boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
 #bboxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
 #babline(h=1,col="red",lty=2)
@@ -150,6 +163,7 @@ las = 1,
 xlim = c(0, 9),
 ylim = c(0, 5),
 at = c(0.5, 3, 5.5, 8),
+varwidth = TRUE,
 ylab = "Score of team climate factor"
 
 )
@@ -178,6 +192,7 @@ names = c("Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "
 las = 1,
 xlim = c(0, 10),
 ylim = c(0, 100),
+varwidth = TRUE,
 at = c(0.5, 2.5, 5, 7.5, 9.5),
 ylab = "Score of personality trait"
 
@@ -280,7 +295,7 @@ ggqqplot(dados$ipip_Openness, main = "Density plot of ipip_Openness",
 ```
 
 ```{r}
-#Shapiro-Wilk’s test
+#Shapiro-Wilk’s test 0 IPIP
 
 
 shapiro.test(dados$ipip_Extraversion)
@@ -293,6 +308,42 @@ shapiro.test(dados$ipip_Neuroticism)
 
 shapiro.test(dados$ipip_Openness)
 ```
+```{r}
+#Shapiro-Wilk’s test 0 IPIP
 
 
+shapiro.test(dados$tci_TeamVision)
+
+shapiro.test(dados$tci_SupportForInovation)
+
+shapiro.test(dados$tci_TaskOrientation)
+
+shapiro.test(dados$tci_ParticipativeSafety)
+
+shapiro.test(dados$iptc)
+
+```
+
+
+
+```{r}
+#Shapiro-Wilk’s test
+
+ICC(dados$iptc)
+```
+
+```{r}
+projetos <- dados %>%
+  group_by(projetoAtual, iptc) %>%
+  summarise(n = n()) %>% 
+  mutate(iptc_projeto = n / mean(iptc)) 
+
+
+projetos %>% 
+  ggplot(aes(x = projetoAtual), y = iptc_projeto ) + 
+  geom_col(width = .3, alpha = .5, fill = "black") +
+  ggtitle("Taxa de resultados igual a zero por grupo") +
+  xlab("Grupo") + 
+  ylab("Taxa de resultados iguais a zero (%)")
+```
 

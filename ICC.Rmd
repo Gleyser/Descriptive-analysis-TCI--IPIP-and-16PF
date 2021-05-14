@@ -1,0 +1,47 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(broom)
+library(modelr)
+library(here)
+library(ggplot2)
+library(reshape2)
+library(grid)
+library("GGally")
+library(tidyverse)
+library(psych)
+library(summarytools)
+library("dplyr")
+library("ggpubr")
+theme_set(theme_bw())
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r ETL}
+TCI2 = read_csv(here::here("TCI-csv2.csv")) 
+
+cols(
+  .default = col_double()
+)
+
+
+```
+
+
+
+```{r}
+#Shapiro-Wilk’s test TCU
+
+ICC(TCI)
+```
+
+```{r}
+#Shapiro-Wilk’s test TCU
+
+ICC(IPIP)
+```
