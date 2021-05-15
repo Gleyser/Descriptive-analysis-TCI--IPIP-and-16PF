@@ -37,7 +37,7 @@ cols(
 ```{r}
 #Shapiro-Wilk’s test TCU
 
-ICC(TCI)
+ICC(TCI2)
 ```
 
 ```{r}

@@ -333,17 +333,36 @@ ICC(dados$iptc)
 ```
 
 ```{r}
-projetos <- dados %>%
-  group_by(projetoAtual, iptc) %>%
-  summarise(n = n()) %>% 
-  mutate(iptc_projeto = n / mean(iptc)) 
+cor(dados$iptc,dados$ipip_Extraversion)
+cor.test(dados$iptc,dados$ipip_Extraversion,method = "pearson")
+
+ggplot(dados, aes(x=dados$iptc, y=dados$ipip_Extraversion))+geom_point()
+```
+
+```{r}
+
+selecionar = select(dados, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "pearson")
+
+```
+```{r}
+
+selecionar = select(dados, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "pearson")
+
+```
+```{r}
+
+selecionar = select(dados, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "spearman")
+
+```
 
 
-projetos %>% 
-  ggplot(aes(x = projetoAtual), y = iptc_projeto ) + 
-  geom_col(width = .3, alpha = .5, fill = "black") +
-  ggtitle("Taxa de resultados igual a zero por grupo") +
-  xlab("Grupo") + 
-  ylab("Taxa de resultados iguais a zero (%)")
+```{r}
+
+selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "pearson")
+
 ```
 

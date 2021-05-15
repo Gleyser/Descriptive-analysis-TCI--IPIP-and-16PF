@@ -1777,13 +1777,26 @@ See spec(...) for full column specifications.</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NoYXBpcm8tV2lsa+KAmXMgdGVzdCBUQ1VcblxuSUNDKFRDSSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NoYXBpcm8tV2lsa+KAmXMgdGVzdCBUQ1VcblxuSUNDKFRDSTIpXG5gYGAifQ== -->
 <pre class="r"><code>#Shapiro-Wilk’s test TCU
 
-ICC(TCI)</code></pre>
+ICC(TCI2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbWtSZXNwTW9kKGZyLCBSRU1MID0gUkVNTHBhc3MpIDogcmVzcG9uc2UgbXVzdCBiZSBudW1lcmljXG4ifQ== -->
-<pre><code>Error in mkRespMod(fr, REML = REMLpass) : response must be numeric</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiQ2FsbDogSUNDKHggPSBUQ0kyKVxuXG5JbnRyYWNsYXNzIGNvcnJlbGF0aW9uIGNvZWZmaWNpZW50cyBcbiJ9 -->
+<pre><code>Call: ICC(x = TCI2)
+
+Intraclass correlation coefficients </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6OCwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJndHlpVERtaXVCaVlHQmdabUJtQTJKV0lKT0J6VG5BME1qVWlJR0JoUW5JWTJSZ1llQUUwUlZBVmNKQUJnY1FDNENVUVNWWVBKMmREWkhZUmtoc1l5aWJGYVFtRzRsamhNd3h6Z1l5K0VCRzJrK3U0cERpOHM2em55Rnl4bURTbEpQMm0vNnUzTG5uZXFyOTg2TnRqQ1p6LzlxL1pGdFFLaEduWXYrMjdYNGhUeTAzVEo4RHY4dzB2Ly9PU3h3MEgreTl3N0Q4QUp6R0lRN1hCL0lNRUJCTHcvVTFOVURFcXcrZzBqakU0ZjVyYWk0LzVaaC8xeTcxMHVia3c5TlB3MmhjNG5COVdkM21BaStuSHJkdllKb2NjWENHdC8wc2Z4V3VKYzFiN2E4OGN0ZzdjMXVWL1VQM0U0YkNVN3ZzWHpaeFQzR3JWSUxyTzdaN3pxUmpDckgyeDlXQ2pObzlYZTF2UzJ5cHVWSzB4LzQ5cDZoRDFya1UrL2Q4SVNtQzVucjI3N2VlMmZoT0lBQXR6bG56RW5OVGk2SHh6UUdMMTVMS2dsUW9teGtZZTdEMDRRWVRTMGt6UkRCaHFZR3hBTXJnenNrdlR5MVNTTW92elV1QkNaVVdGTUNGVUYzQVdaUmZyb2ZzQ2xpcUV3dk96RXZQU1kwdlNpeEpMU3FPVDB3cXpzOHBMWUc1U3dRdW01ZVNud3RWQkpVVGhzcWxaVmFrcHFCS2lUdVdwUllscHVNeVZSUWhqV21zQ0V3U3hWeTA4RXpPU1N5RytRUW15SldTV0pLb2wxWUU5Q1NROXc5TkMzdCtRVWxtZmg1UUU1TXcyUHRBRFdCcENFWTJpTEVJVFlDL05BOFVkQ202eVJtbGVkbTZobWg2ZWFFMEd4S2JBMkk5MDMrMDRHWkpUYzdJaDdMWlV2UFNNL05nZ2NLYWs1aVVtZ1BsOEFHakN4eGJlZ1ZGbVhrbE1COENSWXYxU3ZKTEVtSHF1Skx6YzJBaVlEOHovQU1BQnVHQk5Jd0VBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["type"],"name":[1],"type":["chr"],"align":["left"]},{"label":["ICC"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["F"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["df1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["df2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["p"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["lower bound"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["upper bound"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"ICC1","2":"0.01902020","3":"3.888959","4":"3","5":"592","6":"9.039818e-03","7":"0.003240211","8":"0.1776005","_rn_":"Single_raters_absolute"},{"1":"ICC2","2":"0.02351684","3":"12.938949","4":"3","5":"444","6":"4.064860e-08","7":"0.007817413","8":"0.1808570","_rn_":"Single_random_raters"},{"1":"ICC3","2":"0.07418309","3":"12.938949","4":"3","5":"444","6":"4.064860e-08","7":"0.025692523","8":"0.4233829","_rn_":"Single_fixed_raters"},{"1":"ICC1k","2":"0.74286175","3":"3.888959","4":"3","5":"592","6":"9.039818e-03","7":"0.326309381","8":"0.9698588","_rn_":"Average_raters_absolute"},{"1":"ICC2k","2":"0.78205893","3":"12.938949","4":"3","5":"444","6":"4.064860e-08","7":"0.540012451","8":"0.9704992","_rn_":"Average_random_raters"},{"1":"ICC3k","2":"0.92271397","3":"12.938949","4":"3","5":"444","6":"4.064860e-08","7":"0.797124662","8":"0.9909423","_rn_":"Average_fixed_raters"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gTnVtYmVyIG9mIHN1YmplY3RzID0gNCAgICAgTnVtYmVyIG9mIEp1ZGdlcyA9ICAxNDlcbiJ9 -->
+<pre><code>
+ Number of subjects = 4     Number of Judges =  149</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1812,7 +1825,7 @@ Intraclass correlation coefficients </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGJyb29tKQ0KbGlicmFyeShtb2RlbHIpDQpsaWJyYXJ5KGhlcmUpDQpsaWJyYXJ5KGdncGxvdDIpDQpsaWJyYXJ5KHJlc2hhcGUyKQ0KbGlicmFyeShncmlkKQ0KbGlicmFyeSgiR0dhbGx5IikNCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShwc3ljaCkNCmxpYnJhcnkoc3VtbWFyeXRvb2xzKQ0KbGlicmFyeSgiZHBseXIiKQ0KbGlicmFyeSgiZ2dwdWJyIikNCnRoZW1lX3NldCh0aGVtZV9idygpKQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KYGBgDQoNCmBgYHtyIEVUTH0NClRDSTIgPSByZWFkX2NzdihoZXJlOjpoZXJlKCJUQ0ktY3N2Mi5jc3YiKSkgDQoNCmNvbHMoDQogIC5kZWZhdWx0ID0gY29sX2RvdWJsZSgpDQopDQoNCg0KYGBgDQoNCg0KDQpgYGB7cn0NCiNTaGFwaXJvLVdpbGvigJlzIHRlc3QgVENVDQoNCklDQyhUQ0kpDQpgYGANCg0KYGBge3J9DQojU2hhcGlyby1XaWxr4oCZcyB0ZXN0IFRDVQ0KDQpJQ0MoSVBJUCkNCmBgYA==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGJyb29tKQ0KbGlicmFyeShtb2RlbHIpDQpsaWJyYXJ5KGhlcmUpDQpsaWJyYXJ5KGdncGxvdDIpDQpsaWJyYXJ5KHJlc2hhcGUyKQ0KbGlicmFyeShncmlkKQ0KbGlicmFyeSgiR0dhbGx5IikNCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShwc3ljaCkNCmxpYnJhcnkoc3VtbWFyeXRvb2xzKQ0KbGlicmFyeSgiZHBseXIiKQ0KbGlicmFyeSgiZ2dwdWJyIikNCnRoZW1lX3NldCh0aGVtZV9idygpKQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KYGBgDQoNCmBgYHtyIEVUTH0NClRDSTIgPSByZWFkX2NzdihoZXJlOjpoZXJlKCJUQ0ktY3N2Mi5jc3YiKSkgDQoNCmNvbHMoDQogIC5kZWZhdWx0ID0gY29sX2RvdWJsZSgpDQopDQoNCg0KYGBgDQoNCg0KDQpgYGB7cn0NCiNTaGFwaXJvLVdpbGvigJlzIHRlc3QgVENVDQoNCklDQyhUQ0kyKQ0KYGBgDQoNCmBgYHtyfQ0KI1NoYXBpcm8tV2lsa+KAmXMgdGVzdCBUQ1UNCg0KSUNDKElQSVApDQpgYGA=</div>
 
 
 
