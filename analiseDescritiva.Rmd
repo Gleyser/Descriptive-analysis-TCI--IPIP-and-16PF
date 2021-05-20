@@ -156,13 +156,13 @@ abline(h=5,col="red",lty=2)
 
 mar.orig <- par()$mar
 par(mar=c(9,5,3,0))
-boxplot(dados$tci_TeamVision, dados$tci_TaskOrientation, dados$tci_SupportForInovation, dados$tci_ParticipativeSafety,
+boxplot(dados$tci_TeamVision, dados$tci_TaskOrientation, dados$tci_SupportForInovation, dados$tci_ParticipativeSafety, dados$iptc,
 main = "Team climate factors’ scores",
-names = c("Vision", "Task Orientation", "Support for Inovation", "Participative Safety"),
+names = c("Vision", "Task Orientation", "Support for Inovation", "Participative Safety", "IPTC"),
 las = 1,
-xlim = c(0, 9),
+xlim = c(0, 18),
 ylim = c(0, 5),
-at = c(0.5, 3, 5.5, 8),
+at = c(0.5, 3.5, 8.5, 13.5, 17),
 varwidth = TRUE,
 ylab = "Score of team climate factor"
 
@@ -345,6 +345,14 @@ selecionar = select(dados, ipip_Extraversion, ipip_Agreeableness,ipip_Conscienti
 cor(selecionar, method = "pearson")
 
 ```
+
+
+```{r}
+
+selecionar = select(dados, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "pearson")
+
+```
 ```{r}
 
 selecionar = select(dados, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
@@ -354,15 +362,32 @@ cor(selecionar, method = "pearson")
 ```{r}
 
 selecionar = select(dados, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
-cor(selecionar, method = "spearman")
+cor(selecionar, method = "pearson")
 
 ```
-
 
 ```{r}
 
 selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
 cor(selecionar, method = "pearson")
+
+```
+
+```{r}
+
+selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "spearman")
+
+```
+
+
+
+
+
+```{r}
+
+selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "kendall")
 
 ```
 
