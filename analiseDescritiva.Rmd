@@ -17,6 +17,7 @@ library(psych)
 library(summarytools)
 library("dplyr")
 library("ggpubr")
+library (rcompanion)
 theme_set(theme_bw())
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -325,13 +326,6 @@ shapiro.test(dados$iptc)
 ```
 
 
-
-```{r}
-#Shapiro-Wilk’s test
-
-ICC(dados$iptc)
-```
-
 ```{r}
 cor(dados$iptc,dados$ipip_Extraversion)
 cor.test(dados$iptc,dados$ipip_Extraversion,method = "pearson")
@@ -388,6 +382,423 @@ cor(selecionar, method = "spearman")
 
 selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
 cor(selecionar, method = "kendall")
+
+```
+
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$tci_TeamVision)
+
+qqnorm (dados$tci_TeamVision,
+       ylab = "Sample Quantiles for Team Vision")
+qqline (dados$tci_TeamVision,
+       col = "red")
+shapiro.test(dados$tci_TeamVision)
+
+T_log = log(dados$tci_TeamVision)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$tci_TeamVision)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$tci_TeamVision)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$tci_TeamVision,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+
+```
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$tci_TaskOrientation)
+
+qqnorm (dados$tci_TaskOrientation,
+       ylab = "Sample Quantiles for Team Vision")
+qqline (dados$tci_TaskOrientation,
+       col = "red")
+shapiro.test(dados$tci_TaskOrientation)
+
+T_log = log(dados$tci_TaskOrientation)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$tci_TaskOrientation)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$tci_TaskOrientation)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$tci_TaskOrientation,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+
+```
+
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$tci_SupportForInovation)
+
+qqnorm (dados$tci_SupportForInovation,
+       ylab = "Sample Quantiles for Team Vision")
+qqline (dados$tci_SupportForInovation,
+       col = "red")
+shapiro.test(dados$tci_SupportForInovation)
+
+T_log = log(dados$tci_SupportForInovation)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$tci_SupportForInovation)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$tci_SupportForInovation)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$tci_SupportForInovation,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+
+```
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$tci_ParticipativeSafety)
+
+qqnorm (dados$tci_ParticipativeSafety,
+       ylab = "Sample Quantiles for Team Vision")
+qqline (dados$tci_ParticipativeSafety,
+       col = "red")
+shapiro.test(dados$tci_ParticipativeSafety)
+
+T_log = log(dados$tci_ParticipativeSafety)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$tci_ParticipativeSafety)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$tci_ParticipativeSafety)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$tci_ParticipativeSafety,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+
+```
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$iptc)
+
+qqnorm (dados$iptc,
+       ylab = "Sample Quantiles for IPTC")
+qqline (dados$iptc,
+       col = "pink")
+shapiro.test(dados$iptc)
+
+T_log = log(dados$iptc)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$iptc)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$iptc)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+T_tuk =  transformTukey (dados$iptc,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+```
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$ipip_Extraversion)
+
+qqnorm (dados$ipip_Extraversion,
+       ylab = "Sample Quantiles for IPTC")
+qqline (dados$ipip_Extraversion,
+       col = "pink")
+shapiro.test(dados$ipip_Extraversion)
+
+T_log = log(dados$ipip_Extraversion)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$ipip_Extraversion)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$ipip_Extraversion)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$ipip_Extraversion,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+```
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$ipip_Agreeableness)
+
+qqnorm (dados$ipip_Agreeableness,
+       ylab = "Sample Quantiles for IPTC")
+qqline (dados$ipip_Extraversion,
+       col = "pink")
+shapiro.test(dados$ipip_Agreeableness)
+
+T_log = log(dados$ipip_Extraversion)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$ipip_Agreeableness)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$ipip_Agreeableness)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$ipip_Agreeableness,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+```
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$ipip_Conscientiousness)
+
+qqnorm (dados$ipip_Conscientiousness,
+       ylab = "Sample Quantiles for IPTC")
+qqline (dados$ipip_Conscientiousness,
+       col = "pink")
+shapiro.test(dados$ipip_Conscientiousness)
+
+T_log = log(dados$ipip_Conscientiousness)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$ipip_Conscientiousness)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$ipip_Conscientiousness)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$ipip_Conscientiousness,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+```
+
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$ipip_Neuroticism)
+
+qqnorm (dados$ipip_Neuroticism,
+       ylab = "Sample Quantiles for IPTC")
+qqline (dados$ipip_Neuroticism,
+       col = "pink")
+shapiro.test(dados$ipip_Neuroticism)
+
+T_log = log(dados$ipip_Neuroticism)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$ipip_Neuroticism)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$ipip_Neuroticism)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey (dados$ipip_Neuroticism,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
+
+```
+
+```{r}
+options(scipen = 999)
+plotNormalHistogram (dados$ipip_Openness)
+
+qqnorm (dados$ipip_Openness,
+       ylab = "Sample Quantiles for IPTC")
+qqline (dados$ipip_Openness,
+       col = "pink")
+shapiro.test(dados$ipip_Openness)
+
+T_log = log(dados$ipip_Openness)
+plotNormalHistogram(T_log)
+qqnorm (T_log,
+       ylab = "Sample Quantiles for Team Vision Log")
+qqline (T_log,
+       col = "red")
+shapiro.test(T_log)
+
+T_log10 = log10(dados$ipip_Openness)
+plotNormalHistogram(T_log10)
+qqnorm (T_log10,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log10,
+       col = "blue")
+shapiro.test(T_log10)
+
+T_log2 = log2(dados$ipip_Openness)
+plotNormalHistogram(T_log2)
+qqnorm (T_log2,
+       ylab = "Sample Quantiles for Team Vision Log 10")
+qqline (T_log2,
+       col = "blue")
+shapiro.test(T_log2)
+
+
+T_tuk =  transformTukey(dados$ipip_Openness,
+                     plotit = FALSE)
+plotNormalHistogram (T_tuk)
+shapiro.test(T_tuk)
 
 ```
 
