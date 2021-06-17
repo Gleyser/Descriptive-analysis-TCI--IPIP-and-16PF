@@ -18,6 +18,7 @@ library(summarytools)
 library("dplyr")
 library("ggpubr")
 library (rcompanion)
+library(readxl)
 theme_set(theme_bw())
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -800,5 +801,80 @@ T_tuk =  transformTukey(dados$ipip_Openness,
 plotNormalHistogram (T_tuk)
 shapiro.test(T_tuk)
 
+```
+```{r}
+
+selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc)
+cor(selecionar, method = "spearman")
+
+```
+```{r}
+
+selecionar = select(dados, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "spearman")
+
+```
+```{r}
+
+selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "spearman")
+
+```
+
+```{r}
+
+model = lm(iptc~ipip_Agreeableness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(iptc~ipip_Conscientiousness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_SupportForInovation~ipip_Agreeableness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_TaskOrientation ~ipip_Agreeableness + ipip_Conscientiousness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_TaskOrientation ~ipip_Agreeableness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+
+```{r}
+
+model = lm(tci_TaskOrientation ~ipip_Conscientiousness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_ParticipativeSafety ~ipip_Agreeableness + ipip_Conscientiousness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_ParticipativeSafety ~ipip_Agreeableness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+
+```{r}
+
+model = lm(tci_ParticipativeSafety ~ipip_Conscientiousness, data = dados) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
 ```
 

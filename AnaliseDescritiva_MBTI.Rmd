@@ -1,0 +1,93 @@
+---
+title: "analiseDescritivaMBTI"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(broom)
+library(modelr)
+library(here)
+library(ggplot2)
+library(reshape2)
+library(grid)
+library("GGally")
+library(tidyverse)
+library(psych)
+library(summarytools)
+library("dplyr")
+library("ggpubr")
+library (rcompanion)
+library(readxl)
+theme_set(theme_bw())
+knitr::opts_chunk$set(echo = TRUE)
+
+
+```
+
+```{r ETL}
+dadosMBTI = read_csv(here::here("IPIP-TCI-Subjects-MBTI_final.csv")) 
+
+cols(
+  codigoSHA = col_character(),
+  projetoAtual = col_character(),
+  Role = col_character(),
+  xpPosGraduate = col_double(),
+  xpPosGraduatedVirtus = col_double(),
+  Age = col_double(),
+  Gender = col_character(),
+  tci_TeamVision = col_double(),
+  tci_TaskOrientation = col_double(),
+  tci_SupportForInovation = col_double(),
+  tci_ParticipativeSafety = col_double(),
+  iptc = col_double(),
+  ipip_Extraversion = col_double(),
+  ipip_Agreeableness = col_double(),
+  ipip_Conscientiousness = col_double(),
+  ipip_Neuroticism = col_double(),
+  ipip_Openness = col_double()
+)
+
+```
+```{r}
+
+#psych::describe(dados)
+
+#Média, Mediana, Desvio padrão, coeficiente de variação, minimo e máximo
+descr(dadosMBTI, stats = c("mean", "med", "sd", "cv", "min", "max"), transpose = TRUE)
+
+```
+```{r}
+#summary
+dfSummary(dadosMBTI)
+```
+```{r}
+#Frequencia da idade por grupos
+
+AgeGrp <- as.character(cut(dadosMBTI$Age, breaks=c(20,25,30,35,40,Inf),
+          labels=c('20-25', '26-30', '31-35', '36-40', 'Over 40')))
+
+with(dadosMBTI, stby(data = Age, INDICES = AgeGrp, 
+                   FUN = descr))
+
+```
+```{r}
+#Frequencia da xp pos graduado por grupos
+
+PosGraduateGrp <- as.character(cut(dadosMBTI$xpPosGraduate, breaks=c(0,3,6,10,14,Inf),
+          labels=c('0-3', '4-6', '7-10', '11-14', 'Over 14')))
+
+with(dadosMBTI, stby(data = Age, INDICES = PosGraduateGrp, 
+                   FUN = descr))
+
+```
+```{r}
+#Frequencia da xp pos graduado no virtus por grupos
+
+PosGraduateGrpVirtus <- as.character(cut(dadosMBTI$xpPosGraduatedVirtus, breaks=c(0,3,6,10,14,Inf),
+          labels=c('0-3', '4-6', '7-10', '11-14', 'Over 14')))
+
+with(dadosMBTI, stby(data = Age, INDICES = PosGraduateGrpVirtus, 
+                   FUN = descr))
+
+```
