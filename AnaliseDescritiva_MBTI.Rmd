@@ -91,3 +91,186 @@ with(dadosMBTI, stby(data = Age, INDICES = PosGraduateGrpVirtus,
                    FUN = descr))
 
 ```
+
+```{r}
+#boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+#bboxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+#babline(h=1,col="red",lty=2)
+#babline(h=2,col="red",lty=2)
+#babline(h=3,col="red",lty=2)
+#babline(h=4,col="red",lty=2)
+#babline(h=5,col="red",lty=2)
+
+mar.orig <- par()$mar
+par(mar=c(9,4,3,0))
+boxplot(dadosMBTI$mbti_EXTROVERTIDO, dadosMBTI$mbti_INTUITIVO, dadosMBTI$mbti_PENSANTE, dadosMBTI$mbti_JULGADOR,
+main = "MBTI",
+names = c("Extrovertido", "Intuitivo", "Pensante", "Julgador"),
+las = 1,
+xlim = c(0, 18),
+ylim = c(0, 100),
+at = c(2, 6, 10, 14),
+varwidth = TRUE,
+ylab = "Score of MBTI traits"
+
+)
+
+#abline(h=1,col="red",lty=2)
+#abline(h=2,col="red",lty=2)
+#abline(h=3,col="red",lty=2)
+#abline(h=4,col="red",lty=2)
+#abline(h=5,col="red",lty=2)
+#par(mar = mar.orig)
+```
+```{r}
+#boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+#bboxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+#babline(h=1,col="red",lty=2)
+#babline(h=2,col="red",lty=2)
+#babline(h=3,col="red",lty=2)
+#babline(h=4,col="red",lty=2)
+#babline(h=5,col="red",lty=2)
+
+mar.orig <- par()$mar
+par(mar=c(9,5,3,0))
+boxplot(dadosMBTI$tci_TeamVision, dadosMBTI$tci_TaskOrientation, dadosMBTI$tci_SupportForInovation, dadosMBTI$tci_ParticipativeSafety, dadosMBTI$iptc,
+main = "Team climate factors’ scores",
+names = c("Vision", "Task Orientation", "Support for Inovation", "Participative Safety", "IPTC"),
+las = 1,
+xlim = c(0, 18),
+ylim = c(0, 5),
+at = c(0.5, 3.5, 8.5, 13.5, 17),
+varwidth = TRUE,
+ylab = "Score of team climate factor"
+
+)
+
+abline(h=1,col="red",lty=2)
+abline(h=2,col="red",lty=2)
+abline(h=3,col="red",lty=2)
+abline(h=4,col="red",lty=2)
+abline(h=5,col="red",lty=2)
+#par(mar = mar.orig)
+```
+```{r}
+#Density plot - TCI
+
+
+ggdensity(dadosMBTI$mbti_EXTROVERTIDO, main = "Density plot of mbti_EXTROVERTIDO",
+          xlab = "mbti_EXTROVERTIDO")
+
+ggdensity(dadosMBTI$mbti_INTUITIVO, main = "Density plot of mbti_INTUITIVO",
+          xlab = "mbti_INTUITIVO")
+
+ggdensity(dadosMBTI$mbti_PENSANTE, main = "Density plot of mbti_PENSANTE",
+          xlab = "mbti_PENSANTE")
+
+ggdensity(dadosMBTI$mbti_JULGADOR, main = "Density plot of mbti_JULGADOR",
+          xlab = "tmbti_JULGADOR")
+
+```
+
+```{r}
+#Q-Q plot - TCI
+
+
+ggqqplot(dadosMBTI$mbti_EXTROVERTIDO, main = "Density plot of mbti_EXTROVERTIDO",
+          xlab = "mbti_EXTROVERTIDO")
+
+ggqqplot(dadosMBTI$mbti_INTUITIVO, main = "Density plot of mbti_INTUITIVO",
+          xlab = "mbti_INTUITIVO")
+
+ggqqplot(dadosMBTI$mbti_PENSANTE, main = "Density plot of mbti_PENSANTE",
+          xlab = "mbti_PENSANTE")
+
+ggqqplot(dadosMBTI$mbti_JULGADOR, main = "Density plot of mbti_JULGADOR",
+          xlab = "mbti_JULGADOR")
+
+
+```
+```{r}
+#Shapiro-Wilk’s test
+
+
+shapiro.test(dadosMBTI$mbti_EXTROVERTIDO)
+
+shapiro.test(dadosMBTI$mbti_INTUITIVO)
+
+shapiro.test(dadosMBTI$mbti_PENSANTE)
+
+shapiro.test(dadosMBTI$mbti_JULGADOR)
+
+
+```
+
+```{r}
+#Density plot - TCI
+
+
+ggdensity(dadosMBTI$tci_TeamVision, main = "Density plot of tci_TeamVision",
+          xlab = "tci_TeamVision")
+
+ggdensity(dadosMBTI$tci_TaskOrientation, main = "Density plot of tci_TaskOrientation",
+          xlab = "tci_TaskOrientation")
+
+ggdensity(dadosMBTI$tci_SupportForInovation, main = "Density plot of tci_SupportForInovation",
+          xlab = "tci_SupportForInovation")
+
+ggdensity(dadosMBTI$tci_ParticipativeSafety, main = "Density plot of tci_ParticipativeSafety",
+          xlab = "tci_ParticipativeSafety")
+
+ggdensity(dadosMBTI$iptc, main = "Density plot of iptc",
+          xlab = "iptc")
+```
+
+```{r}
+#Q-Q plot - TCI
+
+
+ggqqplot(dadosMBTI$tci_TeamVision, main = "Density plot of tci_TeamVision",
+          xlab = "tci_TeamVision")
+
+ggqqplot(dadosMBTI$tci_TaskOrientation, main = "Density plot of tci_TaskOrientation",
+          xlab = "tci_TaskOrientation")
+
+ggqqplot(dadosMBTI$tci_SupportForInovation, main = "Density plot of tci_SupportForInovation",
+          xlab = "tci_SupportForInovation")
+
+ggqqplot(dadosMBTI$tci_ParticipativeSafety, main = "Density plot of tci_ParticipativeSafety",
+          xlab = "tci_ParticipativeSafety")
+
+ggqqplot(dadosMBTI$iptc, main = "Density plot of iptc",
+          xlab = "iptc")
+```
+```{r}
+#Shapiro-Wilk’s test
+
+
+shapiro.test(dadosMBTI$tci_TeamVision)
+
+shapiro.test(dadosMBTI$tci_TaskOrientation)
+
+shapiro.test(dadosMBTI$tci_SupportForInovation)
+
+shapiro.test(dadosMBTI$tci_ParticipativeSafety)
+
+shapiro.test(dadosMBTI$iptc)
+```
+```{r}
+
+selecionar = select(dadosMBTI, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc)
+cor(selecionar, method = "spearman")
+
+```
+```{r}
+
+selecionar = select(dadosMBTI, mbti_EXTROVERTIDO, mbti_INTUITIVO, mbti_PENSANTE, mbti_JULGADOR)
+cor(selecionar, method = "spearman")
+
+```
+```{r}
+
+selecionar = select(dadosMBTI, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, mbti_EXTROVERTIDO, mbti_INTUITIVO, mbti_PENSANTE, mbti_JULGADOR)
+cor(selecionar, method = "spearman")
+
+```
