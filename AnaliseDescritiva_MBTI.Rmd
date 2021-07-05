@@ -305,35 +305,35 @@ ggdensity(dadosMBTI$ipip_Openness, main = "Density plot of ipip_Openness",
 #Q-Q plot - IPIP
 
 
-ggqqplot(dados$ipip_Extraversion, main = "Density plot of ipip_Extraversion",
+ggqqplot(dadosMBTI$ipip_Extraversion, main = "Density plot of ipip_Extraversion",
           xlab = "ipip_Extraversion")
 
-ggqqplot(dados$ipip_Agreeableness, main = "Density plot of ipip_Agreeableness",
+ggqqplot(dadosMBTI$ipip_Agreeableness, main = "Density plot of ipip_Agreeableness",
           xlab = "ipip_Agreeableness")
 
-ggqqplot(dados$ipip_Conscientiousness, main = "Density plot of ipip_Conscientiousness",
+ggqqplot(dadosMBTI$ipip_Conscientiousness, main = "Density plot of ipip_Conscientiousness",
           xlab = "ipip_Conscientiousness")
 
-ggqqplot(dados$ipip_Neuroticism, main = "Density plot of ipip_Neuroticism",
+ggqqplot(dadosMBTI$ipip_Neuroticism, main = "Density plot of ipip_Neuroticism",
           xlab = "ipip_Neuroticism")
 
-ggqqplot(dados$ipip_Openness, main = "Density plot of ipip_Openness",
+ggqqplot(dadosMBTI$ipip_Openness, main = "Density plot of ipip_Openness",
           xlab = "ipip_Openness")
 ```
 
 ```{r}
 #Shapiro-Wilk’s test 0 IPIP
 
+options(scipen = 999)
+shapiro.test(dadosMBTI$ipip_Extraversion)
 
-shapiro.test(dados$ipip_Extraversion)
+shapiro.test(dadosMBTI$ipip_Agreeableness)
 
-shapiro.test(dados$ipip_Agreeableness)
+shapiro.test(dadosMBTI$ipip_Conscientiousness)
 
-shapiro.test(dados$ipip_Conscientiousness)
+shapiro.test(dadosMBTI$ipip_Neuroticism)
 
-shapiro.test(dados$ipip_Neuroticism)
-
-shapiro.test(dados$ipip_Openness)
+shapiro.test(dadosMBTI$ipip_Openness)
 ```
 
 
@@ -355,6 +355,18 @@ cor(selecionar, method = "spearman")
 ```{r}
 
 selecionar = select(dadosMBTI, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, mbti_EXTROVERTIDO, mbti_INTUITIVO, mbti_PENSANTE, mbti_JULGADOR)
+cor(selecionar, method = "spearman")
+
+```
+```{r}
+
+selecionar = select(dadosMBTI, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "spearman")
+
+```
+```{r}
+
+selecionar = select(dadosMBTI, mbti_EXTROVERTIDO, mbti_INTUITIVO, mbti_PENSANTE, mbti_JULGADOR, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
 cor(selecionar, method = "spearman")
 
 ```
