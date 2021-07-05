@@ -152,8 +152,33 @@ abline(h=4,col="red",lty=2)
 abline(h=5,col="red",lty=2)
 #par(mar = mar.orig)
 ```
+
 ```{r}
-#Density plot - TCI
+
+mar.orig <- par()$mar
+par(mar=c(9,5,3,0))
+boxplot(dadosMBTI$ipip_Extraversion, dados$ipip_Agreeableness, dados$ipip_Conscientiousness, dados$ipip_Neuroticism,dados$ipip_Openness,
+main = "Personality traits’ scores",
+names = c("Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "Openness"),
+las = 1,
+xlim = c(0, 10),
+ylim = c(0, 100),
+varwidth = TRUE,
+at = c(0.5, 2.5, 5, 7.5, 9.5),
+ylab = "Score of personality trait"
+
+)
+
+abline(h=30,col="red",lty=2)
+abline(h=70,col="red",lty=2)
+
+#par(mar = mar.orig)
+```
+
+
+
+```{r}
+#Density plot - MBTI
 
 
 ggdensity(dadosMBTI$mbti_EXTROVERTIDO, main = "Density plot of mbti_EXTROVERTIDO",
@@ -171,7 +196,7 @@ ggdensity(dadosMBTI$mbti_JULGADOR, main = "Density plot of mbti_JULGADOR",
 ```
 
 ```{r}
-#Q-Q plot - TCI
+#Q-Q plot - MBTI
 
 
 ggqqplot(dadosMBTI$mbti_EXTROVERTIDO, main = "Density plot of mbti_EXTROVERTIDO",
@@ -189,7 +214,7 @@ ggqqplot(dadosMBTI$mbti_JULGADOR, main = "Density plot of mbti_JULGADOR",
 
 ```
 ```{r}
-#Shapiro-Wilk’s test
+#Shapiro-Wilk’s test - MBTI
 
 
 shapiro.test(dadosMBTI$mbti_EXTROVERTIDO)
@@ -243,7 +268,7 @@ ggqqplot(dadosMBTI$iptc, main = "Density plot of iptc",
           xlab = "iptc")
 ```
 ```{r}
-#Shapiro-Wilk’s test
+#Shapiro-Wilk’s test - TCI
 
 
 shapiro.test(dadosMBTI$tci_TeamVision)
@@ -256,6 +281,65 @@ shapiro.test(dadosMBTI$tci_ParticipativeSafety)
 
 shapiro.test(dadosMBTI$iptc)
 ```
+
+```{r}
+#Density plot - IPIP
+
+
+ggdensity(dadosMBTI$ipip_Extraversion, main = "Density plot of ipip_Extraversion",
+          xlab = "ipip_Extraversion")
+
+ggdensity(dadosMBTI$ipip_Agreeableness, main = "Density plot of ipip_Agreeableness",
+          xlab = "ipip_Agreeableness")
+
+ggdensity(dadosMBTI$ipip_Conscientiousness, main = "Density plot of ipip_Conscientiousness",
+          xlab = "ipip_Conscientiousness")
+
+ggdensity(dadosMBTI$ipip_Neuroticism, main = "Density plot of ipip_Neuroticism",
+          xlab = "ipip_Neuroticism")
+
+ggdensity(dadosMBTI$ipip_Openness, main = "Density plot of ipip_Openness",
+          xlab = "ipip_Openness")
+```
+```{r}
+#Q-Q plot - IPIP
+
+
+ggqqplot(dados$ipip_Extraversion, main = "Density plot of ipip_Extraversion",
+          xlab = "ipip_Extraversion")
+
+ggqqplot(dados$ipip_Agreeableness, main = "Density plot of ipip_Agreeableness",
+          xlab = "ipip_Agreeableness")
+
+ggqqplot(dados$ipip_Conscientiousness, main = "Density plot of ipip_Conscientiousness",
+          xlab = "ipip_Conscientiousness")
+
+ggqqplot(dados$ipip_Neuroticism, main = "Density plot of ipip_Neuroticism",
+          xlab = "ipip_Neuroticism")
+
+ggqqplot(dados$ipip_Openness, main = "Density plot of ipip_Openness",
+          xlab = "ipip_Openness")
+```
+
+```{r}
+#Shapiro-Wilk’s test 0 IPIP
+
+
+shapiro.test(dados$ipip_Extraversion)
+
+shapiro.test(dados$ipip_Agreeableness)
+
+shapiro.test(dados$ipip_Conscientiousness)
+
+shapiro.test(dados$ipip_Neuroticism)
+
+shapiro.test(dados$ipip_Openness)
+```
+
+
+
+
+
 ```{r}
 
 selecionar = select(dadosMBTI, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc)
@@ -273,4 +357,34 @@ cor(selecionar, method = "spearman")
 selecionar = select(dadosMBTI, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, mbti_EXTROVERTIDO, mbti_INTUITIVO, mbti_PENSANTE, mbti_JULGADOR)
 cor(selecionar, method = "spearman")
 
+```
+```{r}
+
+model = lm(iptc ~mbti_PENSANTE + mbti_JULGADOR, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(iptc ~mbti_PENSANTE, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(iptc ~mbti_JULGADOR, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_ParticipativeSafety ~mbti_PENSANTE, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+model = lm(tci_TeamVision ~ mbti_INTUITIVO, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+plot(model$residuals, pch = 16, col = "red")
 ```
