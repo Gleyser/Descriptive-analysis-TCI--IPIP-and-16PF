@@ -373,24 +373,27 @@ cor(selecionar, method = "spearman")
 ```{r}
 options(scipen = 999)
 
-plot(dadosMBTI$iptc~dadosMBTI$mbti_PENSANTE)
-plot(dadosMBTI$iptc~dadosMBTI$mbti_JULGADOR)
+
 
 model = lm(iptc ~mbti_PENSANTE + mbti_JULGADOR, data = dadosMBTI) #Create the linear regression
 summary(model) #Review the results
 
+plot(model$residuals, pch = 16, col = "red")
+
+plot(model)
+
 # Visualizar o modelo
-abline(model)
 
 # Teste a normalidade dos resíduos
-shapiro.test(rstudent(model))
+shapiro.test(model$residuals)
+
+durbinWatsonTest(model)
+
+bptest(model)
 
 # Avalie a homogeneidade das variâncias
 plot(rstudent(model) ~ fitted(model), pch = 19)
 abline(h = 0, lty = 2)
-
-# Aleatoriedade dos resíduos
-plot(model$residuals, pch = 16, col = "red")
 ```
 ```{r}
 
@@ -545,6 +548,50 @@ plot(model$residuals, pch = 16, col = "red")
 plot(dadosMBTI$iptc~dadosMBTI$ipip_Conscientiousness)
 
 model = lm(iptc~ipip_Conscientiousness, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+
+# Visualizar o modelo
+abline(model)
+
+# Teste a normalidade dos resíduos
+shapiro.test(rstudent(model))
+
+# Avalie a homogeneidade das variâncias
+plot(rstudent(model) ~ fitted(model), pch = 19)
+abline(h = 0, lty = 2)
+
+# Aleatoriedade dos resíduos
+plot(model$residuals, pch = 16, col = "red")
+```
+```{r}
+
+plot(dadosMBTI$tci_SupportForInovation~dadosMBTI$ipip_Agreeableness)
+
+model = lm(tci_SupportForInovation~ipip_Agreeableness, data = dadosMBTI) #Create the linear regression
+summary(model) #Review the results
+
+# Visualizar o modelo
+abline(model)
+
+# Teste a normalidade dos resíduos
+shapiro.test(rstudent(model))
+
+# Avalie a homogeneidade das variâncias
+plot(rstudent(model) ~ fitted(model), pch = 19)
+abline(h = 0, lty = 2)
+
+# Aleatoriedade dos resíduos
+plot(model$residuals, pch = 16, col = "red")
+```
+
+
+
+
+```{r}
+
+plot(dadosMBTI$tci_TaskOrientation~dadosMBTI$ipip_Agreeableness)
+
+model = lm(tci_TaskOrientation~ipip_Agreeableness, data = dadosMBTI) #Create the linear regression
 summary(model) #Review the results
 
 # Visualizar o modelo
