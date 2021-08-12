@@ -50,8 +50,22 @@ cols(
   ipip_Openness = col_double()
 )
 
+
+
 ```
 
+
+```{r}
+dados %>%
+  group_by(projetoAtual) %>%
+  count()
+
+```
+
+```{r}
+dadosEquipesGrandes <- dados%>%filter(projetoAtual!="Gertec - MDM",projetoAtual!="HP - Windows Device Drivers 2020", projetoAtual!="Ingeteam - Agile-Installer", projetoAtual!="Inovatic - MDA Middleware", projetoAtual!="Inovatic - SCM", projetoAtual!="Motorola - MOTOTRBO Application Explorer")
+
+```
 
 ```{r}
 
@@ -64,7 +78,7 @@ descr(dados, stats = c("mean", "med", "sd", "cv", "min", "max"), transpose = TRU
 
 ```{r}
 #summary
-dfSummary(dados$projetoAtual )
+dfSummary(dados)
 ```
 
 ```{r}
