@@ -3047,6 +3047,167 @@ ols_step_best_subset(model, details = TRUE)</code></pre>
 model &lt;- lm(tci_TeamVision ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_both_p(model, details = TRUE)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU3RlcHdpc2UgU2VsZWN0aW9uIE1ldGhvZCAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbkNhbmRpZGF0ZSBUZXJtczogXG5cbjEuIGlwaXBfRXh0cmF2ZXJzaW9uIFxuMi4gaXBpcF9BZ3JlZWFibGVuZXNzIFxuMy4gaXBpcF9Db25zY2llbnRpb3VzbmVzcyBcbjQuIGlwaXBfTmV1cm90aWNpc20gXG41LiBpcGlwX09wZW5uZXNzIFxuXG5XZSBhcmUgc2VsZWN0aW5nIHZhcmlhYmxlcyBiYXNlZCBvbiBwIHZhbHVlLi4uXG5cblxuU3RlcHdpc2UgU2VsZWN0aW9uOiBTdGVwIDEgXG5cbisgaXBpcF9PcGVubmVzcyBcblxuICAgICAgICAgICAgICAgICAgICAgICAgTW9kZWwgU3VtbWFyeSAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuUiAgICAgICAgICAgICAgICAgICAgICAgMC4xOTggICAgICAgUk1TRSAgICAgICAgICAgICAgICAwLjU4OCBcblItU3F1YXJlZCAgICAgICAgICAgICAgIDAuMDM5ICAgICAgIENvZWYuIFZhciAgICAgICAgICAxNC4wMjQgXG5BZGouIFItU3F1YXJlZCAgICAgICAgICAwLjAzMiAgICAgICBNU0UgICAgICAgICAgICAgICAgIDAuMzQ2IFxuUHJlZCBSLVNxdWFyZWQgICAgICAgICAgMC4wMDYgICAgICAgTUFFICAgICAgICAgICAgICAgICAwLjQ2NiBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gUk1TRTogUm9vdCBNZWFuIFNxdWFyZSBFcnJvciBcbiBNU0U6IE1lYW4gU3F1YXJlIEVycm9yIFxuIE1BRTogTWVhbiBBYnNvbHV0ZSBFcnJvciBcblxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFOT1ZBICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICAgIFN1bSBvZiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgU3F1YXJlcyAgICAgICAgIERGICAgIE1lYW4gU3F1YXJlICAgICAgRiAgICAgICAgU2lnLiBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblJlZ3Jlc3Npb24gICAgICAxLjg1NSAgICAgICAgICAxICAgICAgICAgIDEuODU1ICAgIDUuMzY0ICAgIDAuMDIyMSBcblJlc2lkdWFsICAgICAgIDQ1LjY2MiAgICAgICAgMTMyICAgICAgICAgIDAuMzQ2ICAgICAgICAgICAgICAgICAgICBcblRvdGFsICAgICAgICAgIDQ3LjUxNyAgICAgICAgMTMzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYXJhbWV0ZXIgRXN0aW1hdGVzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgIG1vZGVsICAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgIGxvd2VyICAgICB1cHBlciBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAoSW50ZXJjZXB0KSAgICAgNC4zNTkgICAgICAgICAwLjA4NyAgICAgICAgICAgICAgICAgNDkuODkwICAgIDAuMDAwICAgICA0LjE4NiAgICAgNC41MzEgXG5pcGlwX09wZW5uZXNzICAgIC0wLjAwNSAgICAgICAgIDAuMDAyICAgICAgIC0wLjE5OCAgICAtMi4zMTYgICAgMC4wMjIgICAgLTAuMDEwICAgIC0wLjAwMSBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG5cblxuU3RlcHdpc2UgU2VsZWN0aW9uOiBTdGVwIDIgXG5cbisgaXBpcF9BZ3JlZWFibGVuZXNzIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICBNb2RlbCBTdW1tYXJ5ICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SICAgICAgICAgICAgICAgICAgICAgICAwLjI2OCAgICAgICBSTVNFICAgICAgICAgICAgICAgIDAuNTgwIFxuUi1TcXVhcmVkICAgICAgICAgICAgICAgMC4wNzIgICAgICAgQ29lZi4gVmFyICAgICAgICAgIDEzLjgzNiBcbkFkai4gUi1TcXVhcmVkICAgICAgICAgIDAuMDU4ICAgICAgIE1TRSAgICAgICAgICAgICAgICAgMC4zMzcgXG5QcmVkIFItU3F1YXJlZCAgICAgICAgICAwLjAyOCAgICAgICBNQUUgICAgICAgICAgICAgICAgIDAuNDU3IFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiBSTVNFOiBSb290IE1lYW4gU3F1YXJlIEVycm9yIFxuIE1TRTogTWVhbiBTcXVhcmUgRXJyb3IgXG4gTUFFOiBNZWFuIEFic29sdXRlIEVycm9yIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQU5PVkEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgU3VtIG9mICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICBTcXVhcmVzICAgICAgICAgREYgICAgTWVhbiBTcXVhcmUgICAgICBGICAgICAgICBTaWcuIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuUmVncmVzc2lvbiAgICAgIDMuNDA2ICAgICAgICAgIDIgICAgICAgICAgMS43MDMgICAgNS4wNTggICAgMC4wMDc3IFxuUmVzaWR1YWwgICAgICAgNDQuMTExICAgICAgICAxMzEgICAgICAgICAgMC4zMzcgICAgICAgICAgICAgICAgICAgIFxuVG90YWwgICAgICAgICAgNDcuNTE3ICAgICAgICAxMzMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgbW9kZWwgICAgICBCZXRhICAgIFN0ZC4gRXJyb3IgICAgU3RkLiBCZXRhICAgICAgdCAgICAgICAgU2lnICAgICAgbG93ZXIgICAgIHVwcGVyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAoSW50ZXJjZXB0KSAgICAgNC4wNjUgICAgICAgICAwLjE2MiAgICAgICAgICAgICAgICAgMjUuMTIzICAgIDAuMDAwICAgICAzLjc0NSAgICAgNC4zODUgXG4gICAgIGlwaXBfT3Blbm5lc3MgICAgLTAuMDA3ICAgICAgICAgMC4wMDIgICAgICAgLTAuMjU0ICAgIC0yLjg3OSAgICAwLjAwNSAgICAtMC4wMTEgICAgLTAuMDAyIFxuaXBpcF9BZ3JlZWFibGVuZXNzICAgICAwLjAwNSAgICAgICAgIDAuMDAyICAgICAgICAwLjE4OSAgICAgMi4xNDYgICAgMC4wMzQgICAgIDAuMDAwICAgICAwLjAwOSBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cblxuXG4gICAgICAgICAgICAgICAgICAgICAgICBNb2RlbCBTdW1tYXJ5ICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SICAgICAgICAgICAgICAgICAgICAgICAwLjI2OCAgICAgICBSTVNFICAgICAgICAgICAgICAgIDAuNTgwIFxuUi1TcXVhcmVkICAgICAgICAgICAgICAgMC4wNzIgICAgICAgQ29lZi4gVmFyICAgICAgICAgIDEzLjgzNiBcbkFkai4gUi1TcXVhcmVkICAgICAgICAgIDAuMDU4ICAgICAgIE1TRSAgICAgICAgICAgICAgICAgMC4zMzcgXG5QcmVkIFItU3F1YXJlZCAgICAgICAgICAwLjAyOCAgICAgICBNQUUgICAgICAgICAgICAgICAgIDAuNDU3IFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiBSTVNFOiBSb290IE1lYW4gU3F1YXJlIEVycm9yIFxuIE1TRTogTWVhbiBTcXVhcmUgRXJyb3IgXG4gTUFFOiBNZWFuIEFic29sdXRlIEVycm9yIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQU5PVkEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgU3VtIG9mICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICBTcXVhcmVzICAgICAgICAgREYgICAgTWVhbiBTcXVhcmUgICAgICBGICAgICAgICBTaWcuIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuUmVncmVzc2lvbiAgICAgIDMuNDA2ICAgICAgICAgIDIgICAgICAgICAgMS43MDMgICAgNS4wNTggICAgMC4wMDc3IFxuUmVzaWR1YWwgICAgICAgNDQuMTExICAgICAgICAxMzEgICAgICAgICAgMC4zMzcgICAgICAgICAgICAgICAgICAgIFxuVG90YWwgICAgICAgICAgNDcuNTE3ICAgICAgICAxMzMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgbW9kZWwgICAgICBCZXRhICAgIFN0ZC4gRXJyb3IgICAgU3RkLiBCZXRhICAgICAgdCAgICAgICAgU2lnICAgICAgbG93ZXIgICAgIHVwcGVyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAoSW50ZXJjZXB0KSAgICAgNC4wNjUgICAgICAgICAwLjE2MiAgICAgICAgICAgICAgICAgMjUuMTIzICAgIDAuMDAwICAgICAzLjc0NSAgICAgNC4zODUgXG4gICAgIGlwaXBfT3Blbm5lc3MgICAgLTAuMDA3ICAgICAgICAgMC4wMDIgICAgICAgLTAuMjU0ICAgIC0yLjg3OSAgICAwLjAwNSAgICAtMC4wMTEgICAgLTAuMDAyIFxuaXBpcF9BZ3JlZWFibGVuZXNzICAgICAwLjAwNSAgICAgICAgIDAuMDAyICAgICAgICAwLjE4OSAgICAgMi4xNDYgICAgMC4wMzQgICAgIDAuMDAwICAgICAwLjAwOSBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cblxuXG5ObyBtb3JlIHZhcmlhYmxlcyB0byBiZSBhZGRlZC9yZW1vdmVkLlxuXG5cbkZpbmFsIE1vZGVsIE91dHB1dCBcbi0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICBNb2RlbCBTdW1tYXJ5ICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SICAgICAgICAgICAgICAgICAgICAgICAwLjI2OCAgICAgICBSTVNFICAgICAgICAgICAgICAgIDAuNTgwIFxuUi1TcXVhcmVkICAgICAgICAgICAgICAgMC4wNzIgICAgICAgQ29lZi4gVmFyICAgICAgICAgIDEzLjgzNiBcbkFkai4gUi1TcXVhcmVkICAgICAgICAgIDAuMDU4ICAgICAgIE1TRSAgICAgICAgICAgICAgICAgMC4zMzcgXG5QcmVkIFItU3F1YXJlZCAgICAgICAgICAwLjAyOCAgICAgICBNQUUgICAgICAgICAgICAgICAgIDAuNDU3IFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiBSTVNFOiBSb290IE1lYW4gU3F1YXJlIEVycm9yIFxuIE1TRTogTWVhbiBTcXVhcmUgRXJyb3IgXG4gTUFFOiBNZWFuIEFic29sdXRlIEVycm9yIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQU5PVkEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgU3VtIG9mICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICBTcXVhcmVzICAgICAgICAgREYgICAgTWVhbiBTcXVhcmUgICAgICBGICAgICAgICBTaWcuIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuUmVncmVzc2lvbiAgICAgIDMuNDA2ICAgICAgICAgIDIgICAgICAgICAgMS43MDMgICAgNS4wNTggICAgMC4wMDc3IFxuUmVzaWR1YWwgICAgICAgNDQuMTExICAgICAgICAxMzEgICAgICAgICAgMC4zMzcgICAgICAgICAgICAgICAgICAgIFxuVG90YWwgICAgICAgICAgNDcuNTE3ICAgICAgICAxMzMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgbW9kZWwgICAgICBCZXRhICAgIFN0ZC4gRXJyb3IgICAgU3RkLiBCZXRhICAgICAgdCAgICAgICAgU2lnICAgICAgbG93ZXIgICAgIHVwcGVyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAoSW50ZXJjZXB0KSAgICAgNC4wNjUgICAgICAgICAwLjE2MiAgICAgICAgICAgICAgICAgMjUuMTIzICAgIDAuMDAwICAgICAzLjc0NSAgICAgNC4zODUgXG4gICAgIGlwaXBfT3Blbm5lc3MgICAgLTAuMDA3ICAgICAgICAgMC4wMDIgICAgICAgLTAuMjU0ICAgIC0yLjg3OSAgICAwLjAwNSAgICAtMC4wMTEgICAgLTAuMDAyIFxuaXBpcF9BZ3JlZWFibGVuZXNzICAgICAwLjAwNSAgICAgICAgIDAuMDAyICAgICAgICAwLjE4OSAgICAgMi4xNDYgICAgMC4wMzQgICAgIDAuMDAwICAgICAwLjAwOSBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdGVwd2lzZSBTZWxlY3Rpb24gU3VtbWFyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQWRkZWQvICAgICAgICAgICAgICAgICAgIEFkai4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuU3RlcCAgICAgICAgIFZhcmlhYmxlICAgICAgICAgUmVtb3ZlZCAgICAgUi1TcXVhcmUgICAgUi1TcXVhcmUgICAgIEMocCkgICAgICAgQUlDICAgICAgICBSTVNFICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgIDEgICAgICBpcGlwX09wZW5uZXNzICAgICAgIGFkZGl0aW9uICAgICAgIDAuMDM5ICAgICAgIDAuMDMyICAgIDUuOTA0MCAgICAyNDIuMDE0MSAgICAwLjU4ODIgICAgXG4gICAyICAgIGlwaXBfQWdyZWVhYmxlbmVzcyAgICBhZGRpdGlvbiAgICAgICAwLjA3MiAgICAgICAwLjA1OCAgICAzLjI4OTAgICAgMjM5LjM4NDYgICAgMC41ODAzICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIn0= -->
+<pre><code>Stepwise Selection Method   
+---------------------------
+
+Candidate Terms: 
+
+1. ipip_Extraversion 
+2. ipip_Agreeableness 
+3. ipip_Conscientiousness 
+4. ipip_Neuroticism 
+5. ipip_Openness 
+
+We are selecting variables based on p value...
+
+
+Stepwise Selection: Step 1 
+
++ ipip_Openness 
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.198       RMSE                0.588 
+R-Squared               0.039       Coef. Var          14.024 
+Adj. R-Squared          0.032       MSE                 0.346 
+Pred R-Squared          0.006       MAE                 0.466 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      1.855          1          1.855    5.364    0.0221 
+Residual       45.662        132          0.346                    
+Total          47.517        133                                   
+-------------------------------------------------------------------
+
+                                   Parameter Estimates                                     
+------------------------------------------------------------------------------------------
+        model      Beta    Std. Error    Std. Beta      t        Sig      lower     upper 
+------------------------------------------------------------------------------------------
+  (Intercept)     4.359         0.087                 49.890    0.000     4.186     4.531 
+ipip_Openness    -0.005         0.002       -0.198    -2.316    0.022    -0.010    -0.001 
+------------------------------------------------------------------------------------------
+
+
+
+Stepwise Selection: Step 2 
+
++ ipip_Agreeableness 
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.268       RMSE                0.580 
+R-Squared               0.072       Coef. Var          13.836 
+Adj. R-Squared          0.058       MSE                 0.337 
+Pred R-Squared          0.028       MAE                 0.457 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      3.406          2          1.703    5.058    0.0077 
+Residual       44.111        131          0.337                    
+Total          47.517        133                                   
+-------------------------------------------------------------------
+
+                                      Parameter Estimates                                       
+-----------------------------------------------------------------------------------------------
+             model      Beta    Std. Error    Std. Beta      t        Sig      lower     upper 
+-----------------------------------------------------------------------------------------------
+       (Intercept)     4.065         0.162                 25.123    0.000     3.745     4.385 
+     ipip_Openness    -0.007         0.002       -0.254    -2.879    0.005    -0.011    -0.002 
+ipip_Agreeableness     0.005         0.002        0.189     2.146    0.034     0.000     0.009 
+-----------------------------------------------------------------------------------------------
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.268       RMSE                0.580 
+R-Squared               0.072       Coef. Var          13.836 
+Adj. R-Squared          0.058       MSE                 0.337 
+Pred R-Squared          0.028       MAE                 0.457 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      3.406          2          1.703    5.058    0.0077 
+Residual       44.111        131          0.337                    
+Total          47.517        133                                   
+-------------------------------------------------------------------
+
+                                      Parameter Estimates                                       
+-----------------------------------------------------------------------------------------------
+             model      Beta    Std. Error    Std. Beta      t        Sig      lower     upper 
+-----------------------------------------------------------------------------------------------
+       (Intercept)     4.065         0.162                 25.123    0.000     3.745     4.385 
+     ipip_Openness    -0.007         0.002       -0.254    -2.879    0.005    -0.011    -0.002 
+ipip_Agreeableness     0.005         0.002        0.189     2.146    0.034     0.000     0.009 
+-----------------------------------------------------------------------------------------------
+
+
+
+No more variables to be added/removed.
+
+
+Final Model Output 
+------------------
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.268       RMSE                0.580 
+R-Squared               0.072       Coef. Var          13.836 
+Adj. R-Squared          0.058       MSE                 0.337 
+Pred R-Squared          0.028       MAE                 0.457 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      3.406          2          1.703    5.058    0.0077 
+Residual       44.111        131          0.337                    
+Total          47.517        133                                   
+-------------------------------------------------------------------
+
+                                      Parameter Estimates                                       
+-----------------------------------------------------------------------------------------------
+             model      Beta    Std. Error    Std. Beta      t        Sig      lower     upper 
+-----------------------------------------------------------------------------------------------
+       (Intercept)     4.065         0.162                 25.123    0.000     3.745     4.385 
+     ipip_Openness    -0.007         0.002       -0.254    -2.879    0.005    -0.011    -0.002 
+ipip_Agreeableness     0.005         0.002        0.189     2.146    0.034     0.000     0.009 
+-----------------------------------------------------------------------------------------------
+
+                                  Stepwise Selection Summary                                   
+----------------------------------------------------------------------------------------------
+                               Added/                   Adj.                                      
+Step         Variable         Removed     R-Square    R-Square     C(p)       AIC        RMSE     
+----------------------------------------------------------------------------------------------
+   1      ipip_Openness       addition       0.039       0.032    5.9040    242.0141    0.5882    
+   2    ipip_Agreeableness    addition       0.072       0.058    3.2890    239.3846    0.5803    
+----------------------------------------------------------------------------------------------</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -3056,6 +3217,142 @@ ols_step_both_p(model, details = TRUE)</code></pre>
 model &lt;- lm(tci_TaskOrientation ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_forward_p(model, details = TRUE)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRm9yd2FyZCBTZWxlY3Rpb24gTWV0aG9kICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbkNhbmRpZGF0ZSBUZXJtczogXG5cbjEuIGlwaXBfRXh0cmF2ZXJzaW9uIFxuMi4gaXBpcF9BZ3JlZWFibGVuZXNzIFxuMy4gaXBpcF9Db25zY2llbnRpb3VzbmVzcyBcbjQuIGlwaXBfTmV1cm90aWNpc20gXG41LiBpcGlwX09wZW5uZXNzIFxuXG5XZSBhcmUgc2VsZWN0aW5nIHZhcmlhYmxlcyBiYXNlZCBvbiBwIHZhbHVlLi4uXG5cblxuRm9yd2FyZCBTZWxlY3Rpb246IFN0ZXAgMSBcblxuKyBpcGlwX0FncmVlYWJsZW5lc3MgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjE2ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC42ODEgXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA0NiAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTYuNzk1IFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wMzkgICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjQ2MyBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDE3ICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41MDggXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgMi45ODEgICAgICAgICAgMSAgICAgICAgICAyLjk4MSAgICA2LjQzMiAgICAwLjAxMjQgXG5SZXNpZHVhbCAgICAgICA2MS4xNjkgICAgICAgIDEzMiAgICAgICAgICAwLjQ2MyAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA2NC4xNTAgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgIChJbnRlcmNlcHQpICAgIDMuNjAyICAgICAgICAgMC4xODcgICAgICAgICAgICAgICAgIDE5LjIzNCAgICAwLjAwMCAgICAzLjIzMiAgICAzLjk3MyBcbmlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwNiAgICAgICAgIDAuMDAzICAgICAgICAwLjIxNiAgICAgMi41MzYgICAgMC4wMTIgICAgMC4wMDEgICAgMC4wMTEgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG5cblxuRm9yd2FyZCBTZWxlY3Rpb246IFN0ZXAgMiBcblxuKyBpcGlwX0NvbnNjaWVudGlvdXNuZXNzIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICBNb2RlbCBTdW1tYXJ5ICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SICAgICAgICAgICAgICAgICAgICAgICAwLjI0OSAgICAgICBSTVNFICAgICAgICAgICAgICAgIDAuNjc4IFxuUi1TcXVhcmVkICAgICAgICAgICAgICAgMC4wNjIgICAgICAgQ29lZi4gVmFyICAgICAgICAgIDE2LjcyMiBcbkFkai4gUi1TcXVhcmVkICAgICAgICAgIDAuMDQ4ICAgICAgIE1TRSAgICAgICAgICAgICAgICAgMC40NTkgXG5QcmVkIFItU3F1YXJlZCAgICAgICAgICAwLjAxMCAgICAgICBNQUUgICAgICAgICAgICAgICAgIDAuNTAyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiBSTVNFOiBSb290IE1lYW4gU3F1YXJlIEVycm9yIFxuIE1TRTogTWVhbiBTcXVhcmUgRXJyb3IgXG4gTUFFOiBNZWFuIEFic29sdXRlIEVycm9yIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQU5PVkEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgU3VtIG9mICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICBTcXVhcmVzICAgICAgICAgREYgICAgTWVhbiBTcXVhcmUgICAgICBGICAgICAgICBTaWcuIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuUmVncmVzc2lvbiAgICAgIDMuOTcwICAgICAgICAgIDIgICAgICAgICAgMS45ODUgICAgNC4zMjEgICAgMC4wMTUyIFxuUmVzaWR1YWwgICAgICAgNjAuMTgwICAgICAgICAxMzEgICAgICAgICAgMC40NTkgICAgICAgICAgICAgICAgICAgIFxuVG90YWwgICAgICAgICAgNjQuMTUwICAgICAgICAxMzMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYXJhbWV0ZXIgRXN0aW1hdGVzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgIGxvd2VyICAgIHVwcGVyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAoSW50ZXJjZXB0KSAgICAzLjQxMSAgICAgICAgIDAuMjI3ICAgICAgICAgICAgICAgICAxNC45OTggICAgMC4wMDAgICAgIDIuOTYxICAgIDMuODYxIFxuICAgIGlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwNSAgICAgICAgIDAuMDAzICAgICAgICAwLjE3NCAgICAgMS45NDggICAgMC4wNTQgICAgIDAuMDAwICAgIDAuMDEwIFxuaXBpcF9Db25zY2llbnRpb3VzbmVzcyAgICAwLjAwNSAgICAgICAgIDAuMDAzICAgICAgICAwLjEzMSAgICAgMS40NjggICAgMC4xNDUgICAgLTAuMDAyICAgIDAuMDExIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG5cblxuTm8gbW9yZSB2YXJpYWJsZXMgdG8gYmUgYWRkZWQuXG5cblZhcmlhYmxlcyBFbnRlcmVkOiBcblxuKyBpcGlwX0FncmVlYWJsZW5lc3MgXG4rIGlwaXBfQ29uc2NpZW50aW91c25lc3MgXG5cblxuRmluYWwgTW9kZWwgT3V0cHV0IFxuLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjQ5ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC42NzggXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA2MiAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTYuNzIyIFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wNDggICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjQ1OSBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDEwICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41MDIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgMy45NzAgICAgICAgICAgMiAgICAgICAgICAxLjk4NSAgICA0LjMyMSAgICAwLjAxNTIgXG5SZXNpZHVhbCAgICAgICA2MC4xODAgICAgICAgIDEzMSAgICAgICAgICAwLjQ1OSAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA2NC4xNTAgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICAgIG1vZGVsICAgICBCZXRhICAgIFN0ZC4gRXJyb3IgICAgU3RkLiBCZXRhICAgICAgdCAgICAgICAgU2lnICAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgIChJbnRlcmNlcHQpICAgIDMuNDExICAgICAgICAgMC4yMjcgICAgICAgICAgICAgICAgIDE0Ljk5OCAgICAwLjAwMCAgICAgMi45NjEgICAgMy44NjEgXG4gICAgaXBpcF9BZ3JlZWFibGVuZXNzICAgIDAuMDA1ICAgICAgICAgMC4wMDMgICAgICAgIDAuMTc0ICAgICAxLjk0OCAgICAwLjA1NCAgICAgMC4wMDAgICAgMC4wMTAgXG5pcGlwX0NvbnNjaWVudGlvdXNuZXNzICAgIDAuMDA1ICAgICAgICAgMC4wMDMgICAgICAgIDAuMTMxICAgICAxLjQ2OCAgICAwLjE0NSAgICAtMC4wMDIgICAgMC4wMTEgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTZWxlY3Rpb24gU3VtbWFyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgVmFyaWFibGUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFkai4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuU3RlcCAgICAgICAgICAgRW50ZXJlZCAgICAgICAgICAgIFItU3F1YXJlICAgIFItU3F1YXJlICAgICBDKHApICAgICAgIEFJQyAgICAgICAgUk1TRSAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgMSAgICBpcGlwX0FncmVlYWJsZW5lc3MgICAgICAgICAgMC4wNDY1ICAgICAgMC4wMzkyICAgIDEuMzM3MCAgICAyODEuMTkzMyAgICAwLjY4MDcgICAgXG4gICAyICAgIGlwaXBfQ29uc2NpZW50aW91c25lc3MgICAgICAwLjA2MTkgICAgICAwLjA0NzYgICAgMS4yMTIxICAgIDI4MS4wMDc2ICAgIDAuNjc3OCAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4ifQ== -->
+<pre><code>Forward Selection Method    
+---------------------------
+
+Candidate Terms: 
+
+1. ipip_Extraversion 
+2. ipip_Agreeableness 
+3. ipip_Conscientiousness 
+4. ipip_Neuroticism 
+5. ipip_Openness 
+
+We are selecting variables based on p value...
+
+
+Forward Selection: Step 1 
+
++ ipip_Agreeableness 
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.216       RMSE                0.681 
+R-Squared               0.046       Coef. Var          16.795 
+Adj. R-Squared          0.039       MSE                 0.463 
+Pred R-Squared          0.017       MAE                 0.508 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      2.981          1          2.981    6.432    0.0124 
+Residual       61.169        132          0.463                    
+Total          64.150        133                                   
+-------------------------------------------------------------------
+
+                                    Parameter Estimates                                      
+--------------------------------------------------------------------------------------------
+             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
+--------------------------------------------------------------------------------------------
+       (Intercept)    3.602         0.187                 19.234    0.000    3.232    3.973 
+ipip_Agreeableness    0.006         0.003        0.216     2.536    0.012    0.001    0.011 
+--------------------------------------------------------------------------------------------
+
+
+
+Forward Selection: Step 2 
+
++ ipip_Conscientiousness 
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.249       RMSE                0.678 
+R-Squared               0.062       Coef. Var          16.722 
+Adj. R-Squared          0.048       MSE                 0.459 
+Pred R-Squared          0.010       MAE                 0.502 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      3.970          2          1.985    4.321    0.0152 
+Residual       60.180        131          0.459                    
+Total          64.150        133                                   
+-------------------------------------------------------------------
+
+                                       Parameter Estimates                                        
+-------------------------------------------------------------------------------------------------
+                 model     Beta    Std. Error    Std. Beta      t        Sig      lower    upper 
+-------------------------------------------------------------------------------------------------
+           (Intercept)    3.411         0.227                 14.998    0.000     2.961    3.861 
+    ipip_Agreeableness    0.005         0.003        0.174     1.948    0.054     0.000    0.010 
+ipip_Conscientiousness    0.005         0.003        0.131     1.468    0.145    -0.002    0.011 
+-------------------------------------------------------------------------------------------------
+
+
+
+No more variables to be added.
+
+Variables Entered: 
+
++ ipip_Agreeableness 
++ ipip_Conscientiousness 
+
+
+Final Model Output 
+------------------
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.249       RMSE                0.678 
+R-Squared               0.062       Coef. Var          16.722 
+Adj. R-Squared          0.048       MSE                 0.459 
+Pred R-Squared          0.010       MAE                 0.502 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      3.970          2          1.985    4.321    0.0152 
+Residual       60.180        131          0.459                    
+Total          64.150        133                                   
+-------------------------------------------------------------------
+
+                                       Parameter Estimates                                        
+-------------------------------------------------------------------------------------------------
+                 model     Beta    Std. Error    Std. Beta      t        Sig      lower    upper 
+-------------------------------------------------------------------------------------------------
+           (Intercept)    3.411         0.227                 14.998    0.000     2.961    3.861 
+    ipip_Agreeableness    0.005         0.003        0.174     1.948    0.054     0.000    0.010 
+ipip_Conscientiousness    0.005         0.003        0.131     1.468    0.145    -0.002    0.011 
+-------------------------------------------------------------------------------------------------
+
+                                  Selection Summary                                    
+--------------------------------------------------------------------------------------
+        Variable                                Adj.                                      
+Step           Entered            R-Square    R-Square     C(p)       AIC        RMSE     
+--------------------------------------------------------------------------------------
+   1    ipip_Agreeableness          0.0465      0.0392    1.3370    281.1933    0.6807    
+   2    ipip_Conscientiousness      0.0619      0.0476    1.2121    281.0076    0.6778    
+--------------------------------------------------------------------------------------</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdGVwd2lzZSBmb3J3YXJkIHJlZ3Jlc3Npb24gLSBUYXNrT3JpZW50YXRpb25cbm1vZGVsIDwtIGxtKHRjaV9UYXNrT3JpZW50YXRpb24gfiBpcGlwX0V4dHJhdmVyc2lvbiArIGlwaXBfQWdyZWVhYmxlbmVzcyArIGlwaXBfQ29uc2NpZW50aW91c25lc3MgKyBpcGlwX05ldXJvdGljaXNtICsgaXBpcF9PcGVubmVzcywgZGF0YSA9IGRhZG9zRXF1aXBlc0dyYW5kZXMpXG5vbHNfc3RlcF9hbGxfcG9zc2libGUobW9kZWwpXG5cbmBgYCJ9 -->
@@ -3087,6 +3384,103 @@ ols_step_both_p(model, details = TRUE)</code></pre>
 model &lt;- lm(tci_SupportForInovation ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_forward_p(model, details = TRUE)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRm9yd2FyZCBTZWxlY3Rpb24gTWV0aG9kICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbkNhbmRpZGF0ZSBUZXJtczogXG5cbjEuIGlwaXBfRXh0cmF2ZXJzaW9uIFxuMi4gaXBpcF9BZ3JlZWFibGVuZXNzIFxuMy4gaXBpcF9Db25zY2llbnRpb3VzbmVzcyBcbjQuIGlwaXBfTmV1cm90aWNpc20gXG41LiBpcGlwX09wZW5uZXNzIFxuXG5XZSBhcmUgc2VsZWN0aW5nIHZhcmlhYmxlcyBiYXNlZCBvbiBwIHZhbHVlLi4uXG5cblxuRm9yd2FyZCBTZWxlY3Rpb246IFN0ZXAgMSBcblxuKyBpcGlwX0FncmVlYWJsZW5lc3MgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjU5ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC43NTMgXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA2NyAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTkuMTMwIFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wNjAgICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjU2NyBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDQwICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41OTEgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgNS4zODYgICAgICAgICAgMSAgICAgICAgICA1LjM4NiAgICA5LjQ5NyAgICAwLjAwMjUgXG5SZXNpZHVhbCAgICAgICA3NC44NTYgICAgICAgIDEzMiAgICAgICAgICAwLjU2NyAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA4MC4yNDIgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgIChJbnRlcmNlcHQpICAgIDMuMzMwICAgICAgICAgMC4yMDcgICAgICAgICAgICAgICAgIDE2LjA3NCAgICAwLjAwMCAgICAyLjkyMSAgICAzLjc0MCBcbmlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwOSAgICAgICAgIDAuMDAzICAgICAgICAwLjI1OSAgICAgMy4wODIgICAgMC4wMDMgICAgMC4wMDMgICAgMC4wMTQgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG5cblxuTm8gbW9yZSB2YXJpYWJsZXMgdG8gYmUgYWRkZWQuXG5cblZhcmlhYmxlcyBFbnRlcmVkOiBcblxuKyBpcGlwX0FncmVlYWJsZW5lc3MgXG5cblxuRmluYWwgTW9kZWwgT3V0cHV0IFxuLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjU5ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC43NTMgXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA2NyAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTkuMTMwIFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wNjAgICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjU2NyBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDQwICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41OTEgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgNS4zODYgICAgICAgICAgMSAgICAgICAgICA1LjM4NiAgICA5LjQ5NyAgICAwLjAwMjUgXG5SZXNpZHVhbCAgICAgICA3NC44NTYgICAgICAgIDEzMiAgICAgICAgICAwLjU2NyAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA4MC4yNDIgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgIChJbnRlcmNlcHQpICAgIDMuMzMwICAgICAgICAgMC4yMDcgICAgICAgICAgICAgICAgIDE2LjA3NCAgICAwLjAwMCAgICAyLjkyMSAgICAzLjc0MCBcbmlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwOSAgICAgICAgIDAuMDAzICAgICAgICAwLjI1OSAgICAgMy4wODIgICAgMC4wMDMgICAgMC4wMDMgICAgMC4wMTQgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTZWxlY3Rpb24gU3VtbWFyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgIFZhcmlhYmxlICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFkai4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcblN0ZXAgICAgICAgICBFbnRlcmVkICAgICAgICAgIFItU3F1YXJlICAgIFItU3F1YXJlICAgICBDKHApICAgICAgICBBSUMgICAgICAgIFJNU0UgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgIDEgICAgaXBpcF9BZ3JlZWFibGVuZXNzICAgICAgMC4wNjcxICAgICAgMC4wNjAxICAgIC0xLjA4MjUgICAgMzA4LjI1MTUgICAgMC43NTMxICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
+<pre><code>Forward Selection Method    
+---------------------------
+
+Candidate Terms: 
+
+1. ipip_Extraversion 
+2. ipip_Agreeableness 
+3. ipip_Conscientiousness 
+4. ipip_Neuroticism 
+5. ipip_Openness 
+
+We are selecting variables based on p value...
+
+
+Forward Selection: Step 1 
+
++ ipip_Agreeableness 
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.259       RMSE                0.753 
+R-Squared               0.067       Coef. Var          19.130 
+Adj. R-Squared          0.060       MSE                 0.567 
+Pred R-Squared          0.040       MAE                 0.591 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      5.386          1          5.386    9.497    0.0025 
+Residual       74.856        132          0.567                    
+Total          80.242        133                                   
+-------------------------------------------------------------------
+
+                                    Parameter Estimates                                      
+--------------------------------------------------------------------------------------------
+             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
+--------------------------------------------------------------------------------------------
+       (Intercept)    3.330         0.207                 16.074    0.000    2.921    3.740 
+ipip_Agreeableness    0.009         0.003        0.259     3.082    0.003    0.003    0.014 
+--------------------------------------------------------------------------------------------
+
+
+
+No more variables to be added.
+
+Variables Entered: 
+
++ ipip_Agreeableness 
+
+
+Final Model Output 
+------------------
+
+                        Model Summary                          
+--------------------------------------------------------------
+R                       0.259       RMSE                0.753 
+R-Squared               0.067       Coef. Var          19.130 
+Adj. R-Squared          0.060       MSE                 0.567 
+Pred R-Squared          0.040       MAE                 0.591 
+--------------------------------------------------------------
+ RMSE: Root Mean Square Error 
+ MSE: Mean Square Error 
+ MAE: Mean Absolute Error 
+
+                               ANOVA                                
+-------------------------------------------------------------------
+               Sum of                                              
+              Squares         DF    Mean Square      F        Sig. 
+-------------------------------------------------------------------
+Regression      5.386          1          5.386    9.497    0.0025 
+Residual       74.856        132          0.567                    
+Total          80.242        133                                   
+-------------------------------------------------------------------
+
+                                    Parameter Estimates                                      
+--------------------------------------------------------------------------------------------
+             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
+--------------------------------------------------------------------------------------------
+       (Intercept)    3.330         0.207                 16.074    0.000    2.921    3.740 
+ipip_Agreeableness    0.009         0.003        0.259     3.082    0.003    0.003    0.014 
+--------------------------------------------------------------------------------------------
+
+                                 Selection Summary                                  
+-----------------------------------------------------------------------------------
+        Variable                            Adj.                                       
+Step         Entered          R-Square    R-Square     C(p)        AIC        RMSE     
+-----------------------------------------------------------------------------------
+   1    ipip_Agreeableness      0.0671      0.0601    -1.0825    308.2515    0.7531    
+-----------------------------------------------------------------------------------</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdGVwd2lzZSBmb3J3YXJkIHJlZ3Jlc3Npb24gLSBTdXBwb3J0Rm9ySW5vdmF0aW9uXG5tb2RlbCA8LSBsbSh0Y2lfU3VwcG9ydEZvcklub3ZhdGlvbiB+IGlwaXBfRXh0cmF2ZXJzaW9uICsgaXBpcF9BZ3JlZWFibGVuZXNzICsgaXBpcF9Db25zY2llbnRpb3VzbmVzcyArIGlwaXBfTmV1cm90aWNpc20gKyBpcGlwX09wZW5uZXNzLCBkYXRhID0gZGFkb3NFcXVpcGVzR3JhbmRlcylcbm9sc19zdGVwX2FsbF9wb3NzaWJsZShtb2RlbClcblxuYGBgIn0= -->
@@ -3120,119 +3514,13 @@ ols_step_both_p(model, details = TRUE)</code></pre>
 model &lt;- lm(tci_ParticipativeSafety ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_forward_p(model, details = TRUE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRm9yd2FyZCBTZWxlY3Rpb24gTWV0aG9kICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbkNhbmRpZGF0ZSBUZXJtczogXG5cbjEuIGlwaXBfRXh0cmF2ZXJzaW9uIFxuMi4gaXBpcF9BZ3JlZWFibGVuZXNzIFxuMy4gaXBpcF9Db25zY2llbnRpb3VzbmVzcyBcbjQuIGlwaXBfTmV1cm90aWNpc20gXG41LiBpcGlwX09wZW5uZXNzIFxuXG5XZSBhcmUgc2VsZWN0aW5nIHZhcmlhYmxlcyBiYXNlZCBvbiBwIHZhbHVlLi4uXG5cblxuRm9yd2FyZCBTZWxlY3Rpb246IFN0ZXAgMSBcblxuKyBpcGlwX0FncmVlYWJsZW5lc3MgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjE1ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC43MjkgXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA0NiAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTcuNDI2IFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wMzkgICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjUzMSBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDE5ICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41MjYgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgMy4zOTQgICAgICAgICAgMSAgICAgICAgICAzLjM5NCAgICA2LjM5MyAgICAwLjAxMjYgXG5SZXNpZHVhbCAgICAgICA3MC4wOTAgICAgICAgIDEzMiAgICAgICAgICAwLjUzMSAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA3My40ODQgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgIChJbnRlcmNlcHQpICAgIDMuNzAwICAgICAgICAgMC4yMDAgICAgICAgICAgICAgICAgIDE4LjQ1NyAgICAwLjAwMCAgICAzLjMwNCAgICA0LjA5NyBcbmlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwNyAgICAgICAgIDAuMDAzICAgICAgICAwLjIxNSAgICAgMi41MjggICAgMC4wMTMgICAgMC4wMDEgICAgMC4wMTIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG5cblxuTm8gbW9yZSB2YXJpYWJsZXMgdG8gYmUgYWRkZWQuXG5cblZhcmlhYmxlcyBFbnRlcmVkOiBcblxuKyBpcGlwX0FncmVlYWJsZW5lc3MgXG5cblxuRmluYWwgTW9kZWwgT3V0cHV0IFxuLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjE1ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC43MjkgXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA0NiAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTcuNDI2IFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wMzkgICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjUzMSBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDE5ICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41MjYgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgMy4zOTQgICAgICAgICAgMSAgICAgICAgICAzLjM5NCAgICA2LjM5MyAgICAwLjAxMjYgXG5SZXNpZHVhbCAgICAgICA3MC4wOTAgICAgICAgIDEzMiAgICAgICAgICAwLjUzMSAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA3My40ODQgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgIChJbnRlcmNlcHQpICAgIDMuNzAwICAgICAgICAgMC4yMDAgICAgICAgICAgICAgICAgIDE4LjQ1NyAgICAwLjAwMCAgICAzLjMwNCAgICA0LjA5NyBcbmlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwNyAgICAgICAgIDAuMDAzICAgICAgICAwLjIxNSAgICAgMi41MjggICAgMC4wMTMgICAgMC4wMDEgICAgMC4wMTIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTZWxlY3Rpb24gU3VtbWFyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgIFZhcmlhYmxlICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFkai4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcblN0ZXAgICAgICAgICBFbnRlcmVkICAgICAgICAgIFItU3F1YXJlICAgIFItU3F1YXJlICAgICBDKHApICAgICAgICBBSUMgICAgICAgIFJNU0UgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgIDEgICAgaXBpcF9BZ3JlZWFibGVuZXNzICAgICAgMC4wNDYyICAgICAgMC4wMzkwICAgIC0wLjU3ODMgICAgMjk5LjQzNDkgICAgMC43Mjg3ICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
-<pre><code>Forward Selection Method    
----------------------------
-
-Candidate Terms: 
-
-1. ipip_Extraversion 
-2. ipip_Agreeableness 
-3. ipip_Conscientiousness 
-4. ipip_Neuroticism 
-5. ipip_Openness 
-
-We are selecting variables based on p value...
-
-
-Forward Selection: Step 1 
-
-+ ipip_Agreeableness 
-
-                        Model Summary                          
---------------------------------------------------------------
-R                       0.215       RMSE                0.729 
-R-Squared               0.046       Coef. Var          17.426 
-Adj. R-Squared          0.039       MSE                 0.531 
-Pred R-Squared          0.019       MAE                 0.526 
---------------------------------------------------------------
- RMSE: Root Mean Square Error 
- MSE: Mean Square Error 
- MAE: Mean Absolute Error 
-
-                               ANOVA                                
--------------------------------------------------------------------
-               Sum of                                              
-              Squares         DF    Mean Square      F        Sig. 
--------------------------------------------------------------------
-Regression      3.394          1          3.394    6.393    0.0126 
-Residual       70.090        132          0.531                    
-Total          73.484        133                                   
--------------------------------------------------------------------
-
-                                    Parameter Estimates                                      
---------------------------------------------------------------------------------------------
-             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
---------------------------------------------------------------------------------------------
-       (Intercept)    3.700         0.200                 18.457    0.000    3.304    4.097 
-ipip_Agreeableness    0.007         0.003        0.215     2.528    0.013    0.001    0.012 
---------------------------------------------------------------------------------------------
-
-
-
-No more variables to be added.
-
-Variables Entered: 
-
-+ ipip_Agreeableness 
-
-
-Final Model Output 
-------------------
-
-                        Model Summary                          
---------------------------------------------------------------
-R                       0.215       RMSE                0.729 
-R-Squared               0.046       Coef. Var          17.426 
-Adj. R-Squared          0.039       MSE                 0.531 
-Pred R-Squared          0.019       MAE                 0.526 
---------------------------------------------------------------
- RMSE: Root Mean Square Error 
- MSE: Mean Square Error 
- MAE: Mean Absolute Error 
-
-                               ANOVA                                
--------------------------------------------------------------------
-               Sum of                                              
-              Squares         DF    Mean Square      F        Sig. 
--------------------------------------------------------------------
-Regression      3.394          1          3.394    6.393    0.0126 
-Residual       70.090        132          0.531                    
-Total          73.484        133                                   
--------------------------------------------------------------------
-
-                                    Parameter Estimates                                      
---------------------------------------------------------------------------------------------
-             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
---------------------------------------------------------------------------------------------
-       (Intercept)    3.700         0.200                 18.457    0.000    3.304    4.097 
-ipip_Agreeableness    0.007         0.003        0.215     2.528    0.013    0.001    0.012 
---------------------------------------------------------------------------------------------
-
-                                 Selection Summary                                  
------------------------------------------------------------------------------------
-        Variable                            Adj.                                       
-Step         Entered          R-Square    R-Square     C(p)        AIC        RMSE     
------------------------------------------------------------------------------------
-   1    ipip_Agreeableness      0.0462      0.0390    -0.5783    299.4349    0.7287    
------------------------------------------------------------------------------------</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdGVwd2lzZSBmb3J3YXJkIHJlZ3Jlc3Npb24gLSBQYXJ0aWNpcGF0aXZlU2FmZXR5XG5tb2RlbCA8LSBsbSh0Y2lfUGFydGljaXBhdGl2ZVNhZmV0eSB+IGlwaXBfRXh0cmF2ZXJzaW9uICsgaXBpcF9BZ3JlZWFibGVuZXNzICsgaXBpcF9Db25zY2llbnRpb3VzbmVzcyArIGlwaXBfTmV1cm90aWNpc20gKyBpcGlwX09wZW5uZXNzLCBkYXRhID0gZGFkb3NFcXVpcGVzR3JhbmRlcylcbm9sc19zdGVwX2FsbF9wb3NzaWJsZShtb2RlbClcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdGVwd2lzZSBmb3J3YXJkIHJlZ3Jlc3Npb24gLSBQYXJ0aWNpcGF0aXZlU2FmZXR5XG5tb2RlbCA8LSBsbSh0Y2lfUGFydGljaXBhdGl2ZVNhZmV0eSB+IGlwaXBfRXh0cmF2ZXJzaW9uICsgaXBpcF9BZ3JlZWFibGVuZXNzICsgaXBpcF9Db25zY2llbnRpb3VzbmVzcyArIGlwaXBfTmV1cm90aWNpc20gKyBpcGlwX09wZW5uZXNzLCBkYXRhID0gZGFkb3NFcXVpcGVzR3JhbmRlcylcbm9sc19zdGVwX2FsbF9wb3NzaWJsZShtb2RlbClcblxuYGBgIn0= -->
 <pre class="r"><code># stepwise forward regression - ParticipativeSafety
 model &lt;- lm(tci_ParticipativeSafety ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
-ols_step_all_possible(model)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NiwibnJvdyI6MzF9LCJyZGYiOiJINHNJQUFBQUFBQUFCcTFYZTB4VFZ4Zy90TFFDRG1nQmdTcURicmlnTGlEZzBEREl2a1B3QVZPZ3N1a1F0dG5TWHFGWWJtc2Z5S0xCZ3M4L0dHNkxEMENqVlFPeVVoSWR1dm1LYldET2FaYjQyRkJtcUVPek1aVEpzcGt0eWdqdXRONXJ1dEppMVRYNTVkN3pmZWY3Zlk5N2J2dHI0ZnlpT1VGRlFRZ2hMdUx5Q1hqa0Z2R3pKU21wYWFrSStYUEl5Zy81bzBESHRacnNDbmU0Q1lJSjRweE9oRGpPY0xLYmdNZjRKeEVFRURnQ0hmU1RDVjVpNGtJSVFna0VCRUtDTUFJSGJ3VEJGSUpJZ2lpQ2FBSVJ3VlNDYVFReEJDOFR4REs1WFd0d0I4ZEhjSDJFdndmd21CN2ltQUdGS1RWS3pjcXNNaTFGeVVwVkZFM3BkSXduMHVuSlZ0TTZ1WktpOVVxMVFlZmlGVGk5K1pSQnE5WXI1VXBkSldNWE91MExxdlZhV1JXbDFTblZOT01JZGpvS05CVHR3akp6ZkhieGhHbW5qNk1YZTIwZzNodjUrS285a0lnOTFUdkRTM3B2NVNaNDlub3JZL3BFMjkxS2VkVkxLZU5aWTkzdEh2bml2UEM1YmN2dzVRRk1QSlEzZlE3dzF0RzhaMlJ3NnlIVjl4N2NJdE44anh4ZmRZb1BXeWZJK3ZUcGVBeE85L1hJZWl0NzdyTVJ1S1ZQZnZveDlSaVgrd0xuekNQaGtoY21IRCthbk9kbjhGaGo5bk1kTDQ5VWk1NzdzWHVrSy80L3ArZVc0ZkdQYXh3Y2JxMUx6NzlqZ0YyTjFtTjB2QWkyMUFXdjZCZ01nYzNmbUt3MVExMndaUDNkMDd2NW5kQXVPWnBiaFMrRFdUS3I0UndxQUhNazM1RHo5ekMwU1RiTzY0cGFESTIxOXF4M014ZEM0eHRYNnVmbXRNUHVUNWMxdDVTcm9ONjh3RElpZlFqYk10QkkzWklnMkh4M1pjZ3BXd1JZRXNPTTZyYTkwUDdIbEhVYiszK0Zkc3ZEcEJreFBkRGVNUHZhUUVBYW1FZjJYVC9hOWoyWUQ1elArN00vREpvU1lnYTI5Rm1nU1hDcDdDRC9KRFErZUQ5ai83RkkrRGlseTQvTHRZTmx3RlJUa1ZZRWxnL3F6OWs3RzhHUzF6M2Frek1HN1gvdDJYWTg5MjFvYWluMnI1QkZRUWYzVW4xNmZzbVQvZy9kTHc4TmwydWdnVGNmM3pOZ1VCM09peENOSWxCMi92WmxXZyt5cmx1VHVTOUZoT0RRM1dMUkthTUVEdjR5Mk4zMW1nWU9tbTlWNW8yYXdIUnpUVWRmYlRMVTFReFFwV2RzVUh0YmYycXN4d2JHWFRWRHZaOGo2MUxKaVEzeFB5TnJoYm03K0l1RnlLb05PT3RYMG8zZ0FPZWljSGFPR0V6bktnNmZTQkNBYWNQcGtlQnFzcFptZG1VUjN2MmZiWDFRMHQwUCsvcXNLZk51WUpCZTZlMjE3MEFnblpaL2RWWXlnZzliNVpjZVJTTnJyZUxrcHAra1J0aHpmVmN4T202RTVqUERIVDJoWW1qZVc3cXB0TW9HVFFQTi9vSTlZcXZoclFXRmord0lkaXdlS2lpTDdHZjd0OTZ1M1huc1JCckN2TzNmY1c4TUdMSGc0a2lMOFhVYkZveTJVb0VyYkRneU4wTWZlOVVFZlQvRS9yZzhGY0hBblFaeDNTb0VnOWRNTVMzVkNPNFB2NWRwK3NpSWhWKzNKcitTajdIdzN2cDEzMjdxeDJIejR6OVpaamZpcUptNFBLY1A0K2psc1lxUnlUWWNmVDlSMFZZcXhYN25GNkVkRVViTVdWZzFZK01OakRuWDdKM2RjeERtUnNjWGpKa1I5bCtLcG0vdkpYVUZsMXllZVFGaFVXWG9rZklINUZwOWEzaG9VSXBGbTY5dithcFFpdU40UmF2OTU1QjZZMysvZVd0cVB4WWNnYU5uOVJnTGJQK2szNVRhc0RCV2JhQkpmZUtkNFdrWEx2WmpoMVIwZnY2aldIbTBySkxTTVNxTnp4cHphUVZWeldyYWZPWW1TS0tsRkVxNVhxMWxYOU9Bd3NSMzFoaGtXb29WWFZtS2lpU3htM0Z5bmt5bFVxOU4wSW16Tlc3SkE3WHF0VWxzQWF4VWRaWEtmb3lFREVLUEpUTXJrU2U1eU9RQVJpb0hNazJ3MHRnaG1ZVXVFdGxWUGp1azhsUkdKck9TT2M1OU1uS1ZUTWRPaGpVR0tXUjZXZElxTGFtWnJNYmNRaWFwTmVScmlDWkJuSEFYOGZ2azM0SFd6UkJxb0IzZEt4TGw1UVo2ZGVKY3BsTldvQWN6MXppWGUvN2psSnhIREJXUG9lSlRkSm1TWm1mT1U4bEtLUld6Q0NGVGRnNDVTYU5WMG5xMkUyTFZKZW5WZWhtN0wwaXVWckVXWjI5bzdGOHEyZ1hYL0F3QUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Index"],"name":[1],"type":["int"],"align":["right"]},{"label":["N"],"name":[2],"type":["int"],"align":["right"]},{"label":["Predictors"],"name":[3],"type":["chr"],"align":["left"]},{"label":["R-Square"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Adj. R-Square"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Mallow's Cp"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1","3":"ipip_Agreeableness","4":"0.0461922355","5":"0.038966419","6":"-0.5783185","_rn_":"2"},{"1":"2","2":"1","3":"ipip_Conscientiousness","4":"0.0220670656","5":"0.014658483","6":"2.6952133","_rn_":"3"},{"1":"3","2":"1","3":"ipip_Neuroticism","4":"0.0109902423","5":"0.003497744","6":"4.1982218","_rn_":"4"},{"1":"4","2":"1","3":"ipip_Extraversion","4":"0.0106327589","5":"0.003137553","6":"4.2467285","_rn_":"1"},{"1":"5","2":"1","3":"ipip_Openness","4":"0.0008693834","5":"-0.006699788","6":"5.5715159","_rn_":"5"},{"1":"6","2":"2","3":"ipip_Agreeableness ipip_Conscientiousness","4":"0.0533500101","5":"0.038897339","6":"0.4504468","_rn_":"10"},{"1":"7","2":"2","3":"ipip_Extraversion ipip_Agreeableness","4":"0.0513928699","5":"0.036910318","6":"0.7160102","_rn_":"6"},{"1":"8","2":"2","3":"ipip_Agreeableness ipip_Neuroticism","4":"0.0509492891","5":"0.036459965","6":"0.7761994","_rn_":"11"},{"1":"9","2":"2","3":"ipip_Agreeableness ipip_Openness","4":"0.0474892622","5":"0.032947113","6":"1.2456887","_rn_":"12"},{"1":"10","2":"2","3":"ipip_Extraversion ipip_Conscientiousness","4":"0.0239328929","5":"0.009031105","6":"4.4420402","_rn_":"7"},{"1":"11","2":"2","3":"ipip_Conscientiousness ipip_Neuroticism","4":"0.0236389868","5":"0.008732712","6":"4.4819202","_rn_":"13"},{"1":"12","2":"2","3":"ipip_Conscientiousness ipip_Openness","4":"0.0230153442","5":"0.008099548","6":"4.5665419","_rn_":"14"},{"1":"13","2":"2","3":"ipip_Extraversion ipip_Neuroticism","4":"0.0139966434","5":"-0.001056843","6":"5.7902848","_rn_":"8"},{"1":"14","2":"2","3":"ipip_Neuroticism ipip_Openness","4":"0.0118312909","5":"-0.003255254","6":"6.0841003","_rn_":"15"},{"1":"15","2":"2","3":"ipip_Extraversion ipip_Openness","4":"0.0107009341","5":"-0.004402868","6":"6.2374778","_rn_":"9"},{"1":"16","2":"3","3":"ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness","4":"0.0550313741","5":"0.033224406","6":"2.2223034","_rn_":"16"},{"1":"17","2":"3","3":"ipip_Agreeableness ipip_Conscientiousness ipip_Neuroticism","4":"0.0545736993","5":"0.032756169","6":"2.2844051","_rn_":"22"},{"1":"18","2":"3","3":"ipip_Agreeableness ipip_Conscientiousness ipip_Openness","4":"0.0540540570","5":"0.032224535","6":"2.3549151","_rn_":"23"},{"1":"19","2":"3","3":"ipip_Extraversion ipip_Agreeableness ipip_Openness","4":"0.0538191748","5":"0.031984233","6":"2.3867861","_rn_":"18"},{"1":"20","2":"3","3":"ipip_Extraversion ipip_Agreeableness ipip_Neuroticism","4":"0.0526933325","5":"0.030832409","6":"2.5395511","_rn_":"17"},{"1":"21","2":"3","3":"ipip_Agreeableness ipip_Neuroticism ipip_Openness","4":"0.0520155223","5":"0.030138957","6":"2.6315228","_rn_":"24"},{"1":"22","2":"3","3":"ipip_Conscientiousness ipip_Neuroticism ipip_Openness","4":"0.0245632663","5":"0.002053188","6":"6.3565052","_rn_":"25"},{"1":"23","2":"3","3":"ipip_Extraversion ipip_Conscientiousness ipip_Neuroticism","4":"0.0244781882","5":"0.001966146","6":"6.3680494","_rn_":"19"},{"1":"24","2":"3","3":"ipip_Extraversion ipip_Conscientiousness ipip_Openness","4":"0.0243849193","5":"0.001870725","6":"6.3807050","_rn_":"20"},{"1":"25","2":"3","3":"ipip_Extraversion ipip_Neuroticism ipip_Openness","4":"0.0142550618","5":"-0.008492898","6":"7.7552201","_rn_":"21"},{"1":"26","2":"4","3":"ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness ipip_Openness","4":"0.0564470438","5":"0.027189588","6":"4.0302119","_rn_":"27"},{"1":"27","2":"4","3":"ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness ipip_Neuroticism","4":"0.0554012291","5":"0.026111345","6":"4.1721180","_rn_":"26"},{"1":"28","2":"4","3":"ipip_Agreeableness ipip_Conscientiousness ipip_Neuroticism ipip_Openness","4":"0.0552808043","5":"0.025987186","6":"4.1884584","_rn_":"30"},{"1":"29","2":"4","3":"ipip_Extraversion ipip_Agreeableness ipip_Neuroticism ipip_Openness","4":"0.0546082119","5":"0.025293738","6":"4.2797221","_rn_":"28"},{"1":"30","2":"4","3":"ipip_Extraversion ipip_Conscientiousness ipip_Neuroticism ipip_Openness","4":"0.0250448289","5":"-0.005186339","6":"8.2911622","_rn_":"29"},{"1":"31","2":"5","3":"ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness ipip_Neuroticism ipip_Openness","4":"0.0566696986","5":"0.019820859","6":"6.0000000","_rn_":"31"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[31]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
+ols_step_all_possible(model)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
@@ -3242,37 +3530,6 @@ ols_step_all_possible(model)</code></pre>
 model &lt;- lm(tci_ParticipativeSafety ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_best_subset(model, details = TRUE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCZXN0IFN1YnNldHMgUmVncmVzc2lvbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbk1vZGVsIEluZGV4ICAgIFByZWRpY3RvcnNcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAxICAgICAgICAgaXBpcF9BZ3JlZWFibGVuZXNzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAyICAgICAgICAgaXBpcF9BZ3JlZWFibGVuZXNzIGlwaXBfQ29uc2NpZW50aW91c25lc3MgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAzICAgICAgICAgaXBpcF9FeHRyYXZlcnNpb24gaXBpcF9BZ3JlZWFibGVuZXNzIGlwaXBfQ29uc2NpZW50aW91c25lc3MgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICA0ICAgICAgICAgaXBpcF9FeHRyYXZlcnNpb24gaXBpcF9BZ3JlZWFibGVuZXNzIGlwaXBfQ29uc2NpZW50aW91c25lc3MgaXBpcF9PcGVubmVzcyAgICAgICAgICAgICAgICAgIFxuICAgICA1ICAgICAgICAgaXBpcF9FeHRyYXZlcnNpb24gaXBpcF9BZ3JlZWFibGVuZXNzIGlwaXBfQ29uc2NpZW50aW91c25lc3MgaXBpcF9OZXVyb3RpY2lzbSBpcGlwX09wZW5uZXNzIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFN1YnNldHMgUmVncmVzc2lvbiBTdW1tYXJ5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICAgICAgICAgIEFkai4gICAgICAgIFByZWQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG5Nb2RlbCAgICBSLVNxdWFyZSAgICBSLVNxdWFyZSAgICBSLVNxdWFyZSAgICAgQyhwKSAgICAgICAgQUlDICAgICAgICAgU0JJQyAgICAgICAgU0JDICAgICAgICBNU0VQICAgICAgIEZQRSAgICAgICBIU1AgICAgICAgQVBDICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAxICAgICAgICAwLjA0NjIgICAgICAwLjAzOTAgICAgICAwLjAxODggICAgLTAuNTc4MyAgICAyOTkuNDM0OSAgICAtODAuNzAxNyAgICAzMDguMTI4NCAgICA3MS4xNTE3ICAgIDAuNTM4OSAgICAwLjAwNDEgICAgMC45ODI3IFxuICAyICAgICAgICAwLjA1MzQgICAgICAwLjAzODkgICAgICAwLjAwMzcgICAgIDAuNDUwNCAgICAzMDAuNDI1NSAgICAtNzkuNTk0NiAgICAzMTIuMDE2OCAgICA3MS4xNjEwICAgIDAuNTQyOSAgICAwLjAwNDEgICAgMC45OTAwIFxuICAzICAgICAgICAwLjA1NTAgICAgICAwLjAzMzIgICAgIC0wLjAxMTkgICAgIDIuMjIyMyAgICAzMDIuMTg3MyAgICAtNzcuNzMxOCAgICAzMTYuNjc2NSAgICA3MS41ODUzICAgIDAuNTUwMSAgICAwLjAwNDEgICAgMS4wMDMxIFxuICA0ICAgICAgICAwLjA1NjQgICAgICAwLjAyNzIgICAgIC0wLjAyNTggICAgIDQuMDMwMiAgICAzMDMuOTg2NCAgICAtNzUuODI3MiAgICAzMjEuMzczNCAgICA3Mi4wMzY0ICAgIDAuNTU3NSAgICAwLjAwNDIgICAgMS4wMTY3IFxuICA1ICAgICAgICAwLjA1NjcgICAgICAwLjAxOTggICAgIC0wLjA0MzYgICAgIDYuMDAwMCAgICAzMDUuOTU0NyAgICAtNzMuNzYyNyAgICAzMjYuMjM5NiAgICA3Mi41ODY1ICAgIDAuNTY1OCAgICAwLjAwNDMgICAgMS4wMzE4IFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5BSUM6IEFrYWlrZSBJbmZvcm1hdGlvbiBDcml0ZXJpYSBcbiBTQklDOiBTYXdhJ3MgQmF5ZXNpYW4gSW5mb3JtYXRpb24gQ3JpdGVyaWEgXG4gU0JDOiBTY2h3YXJ6IEJheWVzaWFuIENyaXRlcmlhIFxuIE1TRVA6IEVzdGltYXRlZCBlcnJvciBvZiBwcmVkaWN0aW9uLCBhc3N1bWluZyBtdWx0aXZhcmlhdGUgbm9ybWFsaXR5IFxuIEZQRTogRmluYWwgUHJlZGljdGlvbiBFcnJvciBcbiBIU1A6IEhvY2tpbmcncyBTcCBcbiBBUEM6IEFtZW1peWEgUHJlZGljdGlvbiBDcml0ZXJpYSBcbiJ9 -->
-<pre><code>                                         Best Subsets Regression                                         
----------------------------------------------------------------------------------------------------------
-Model Index    Predictors
----------------------------------------------------------------------------------------------------------
-     1         ipip_Agreeableness                                                                         
-     2         ipip_Agreeableness ipip_Conscientiousness                                                  
-     3         ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness                                
-     4         ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness ipip_Openness                  
-     5         ipip_Extraversion ipip_Agreeableness ipip_Conscientiousness ipip_Neuroticism ipip_Openness 
----------------------------------------------------------------------------------------------------------
-
-                                                   Subsets Regression Summary                                                    
----------------------------------------------------------------------------------------------------------------------------------
-                       Adj.        Pred                                                                                           
-Model    R-Square    R-Square    R-Square     C(p)        AIC         SBIC        SBC        MSEP       FPE       HSP       APC  
----------------------------------------------------------------------------------------------------------------------------------
-  1        0.0462      0.0390      0.0188    -0.5783    299.4349    -80.7017    308.1284    71.1517    0.5389    0.0041    0.9827 
-  2        0.0534      0.0389      0.0037     0.4504    300.4255    -79.5946    312.0168    71.1610    0.5429    0.0041    0.9900 
-  3        0.0550      0.0332     -0.0119     2.2223    302.1873    -77.7318    316.6765    71.5853    0.5501    0.0041    1.0031 
-  4        0.0564      0.0272     -0.0258     4.0302    303.9864    -75.8272    321.3734    72.0364    0.5575    0.0042    1.0167 
-  5        0.0567      0.0198     -0.0436     6.0000    305.9547    -73.7627    326.2396    72.5865    0.5658    0.0043    1.0318 
----------------------------------------------------------------------------------------------------------------------------------
-AIC: Akaike Information Criteria 
- SBIC: Sawa&#39;s Bayesian Information Criteria 
- SBC: Schwarz Bayesian Criteria 
- MSEP: Estimated error of prediction, assuming multivariate normality 
- FPE: Final Prediction Error 
- HSP: Hocking&#39;s Sp 
- APC: Amemiya Prediction Criteria </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIHN0ZXB3aXNlIGZvcndhcmQgcmVncmVzc2lvbiAtIFBhcnRpY2lwYXRpdmVTYWZldHlcbm1vZGVsIDwtIGxtKHRjaV9QYXJ0aWNpcGF0aXZlU2FmZXR5IH4gaXBpcF9FeHRyYXZlcnNpb24gKyBpcGlwX0FncmVlYWJsZW5lc3MgKyBpcGlwX0NvbnNjaWVudGlvdXNuZXNzICsgaXBpcF9OZXVyb3RpY2lzbSArIGlwaXBfT3Blbm5lc3MsIGRhdGEgPSBkYWRvc0VxdWlwZXNHcmFuZGVzKVxub2xzX3N0ZXBfYm90aF9wKG1vZGVsLCBkZXRhaWxzID0gVFJVRSlcbmBgYCJ9 -->
@@ -3281,99 +3538,6 @@ AIC: Akaike Information Criteria
 model &lt;- lm(tci_ParticipativeSafety ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_both_p(model, details = TRUE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiU3RlcHdpc2UgU2VsZWN0aW9uIE1ldGhvZCAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbkNhbmRpZGF0ZSBUZXJtczogXG5cbjEuIGlwaXBfRXh0cmF2ZXJzaW9uIFxuMi4gaXBpcF9BZ3JlZWFibGVuZXNzIFxuMy4gaXBpcF9Db25zY2llbnRpb3VzbmVzcyBcbjQuIGlwaXBfTmV1cm90aWNpc20gXG41LiBpcGlwX09wZW5uZXNzIFxuXG5XZSBhcmUgc2VsZWN0aW5nIHZhcmlhYmxlcyBiYXNlZCBvbiBwIHZhbHVlLi4uXG5cblxuU3RlcHdpc2UgU2VsZWN0aW9uOiBTdGVwIDEgXG5cbisgaXBpcF9BZ3JlZWFibGVuZXNzIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICBNb2RlbCBTdW1tYXJ5ICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SICAgICAgICAgICAgICAgICAgICAgICAwLjIxNSAgICAgICBSTVNFICAgICAgICAgICAgICAgIDAuNzI5IFxuUi1TcXVhcmVkICAgICAgICAgICAgICAgMC4wNDYgICAgICAgQ29lZi4gVmFyICAgICAgICAgIDE3LjQyNiBcbkFkai4gUi1TcXVhcmVkICAgICAgICAgIDAuMDM5ICAgICAgIE1TRSAgICAgICAgICAgICAgICAgMC41MzEgXG5QcmVkIFItU3F1YXJlZCAgICAgICAgICAwLjAxOSAgICAgICBNQUUgICAgICAgICAgICAgICAgIDAuNTI2IFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiBSTVNFOiBSb290IE1lYW4gU3F1YXJlIEVycm9yIFxuIE1TRTogTWVhbiBTcXVhcmUgRXJyb3IgXG4gTUFFOiBNZWFuIEFic29sdXRlIEVycm9yIFxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQU5PVkEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgU3VtIG9mICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICBTcXVhcmVzICAgICAgICAgREYgICAgTWVhbiBTcXVhcmUgICAgICBGICAgICAgICBTaWcuIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuUmVncmVzc2lvbiAgICAgIDMuMzk0ICAgICAgICAgIDEgICAgICAgICAgMy4zOTQgICAgNi4zOTMgICAgMC4wMTI2IFxuUmVzaWR1YWwgICAgICAgNzAuMDkwICAgICAgICAxMzIgICAgICAgICAgMC41MzEgICAgICAgICAgICAgICAgICAgIFxuVG90YWwgICAgICAgICAgNzMuNDg0ICAgICAgICAxMzMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYXJhbWV0ZXIgRXN0aW1hdGVzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgbW9kZWwgICAgIEJldGEgICAgU3RkLiBFcnJvciAgICBTdGQuIEJldGEgICAgICB0ICAgICAgICBTaWcgICAgIGxvd2VyICAgIHVwcGVyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAoSW50ZXJjZXB0KSAgICAzLjcwMCAgICAgICAgIDAuMjAwICAgICAgICAgICAgICAgICAxOC40NTcgICAgMC4wMDAgICAgMy4zMDQgICAgNC4wOTcgXG5pcGlwX0FncmVlYWJsZW5lc3MgICAgMC4wMDcgICAgICAgICAwLjAwMyAgICAgICAgMC4yMTUgICAgIDIuNTI4ICAgIDAuMDEzICAgIDAuMDAxICAgIDAuMDEyIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblxuXG5cbk5vIG1vcmUgdmFyaWFibGVzIHRvIGJlIGFkZGVkL3JlbW92ZWQuXG5cblxuRmluYWwgTW9kZWwgT3V0cHV0IFxuLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgIE1vZGVsIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cblIgICAgICAgICAgICAgICAgICAgICAgIDAuMjE1ICAgICAgIFJNU0UgICAgICAgICAgICAgICAgMC43MjkgXG5SLVNxdWFyZWQgICAgICAgICAgICAgICAwLjA0NiAgICAgICBDb2VmLiBWYXIgICAgICAgICAgMTcuNDI2IFxuQWRqLiBSLVNxdWFyZWQgICAgICAgICAgMC4wMzkgICAgICAgTVNFICAgICAgICAgICAgICAgICAwLjUzMSBcblByZWQgUi1TcXVhcmVkICAgICAgICAgIDAuMDE5ICAgICAgIE1BRSAgICAgICAgICAgICAgICAgMC41MjYgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIFJNU0U6IFJvb3QgTWVhbiBTcXVhcmUgRXJyb3IgXG4gTVNFOiBNZWFuIFNxdWFyZSBFcnJvciBcbiBNQUU6IE1lYW4gQWJzb2x1dGUgRXJyb3IgXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBTk9WQSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICBTdW0gb2YgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIFNxdWFyZXMgICAgICAgICBERiAgICBNZWFuIFNxdWFyZSAgICAgIEYgICAgICAgIFNpZy4gXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5SZWdyZXNzaW9uICAgICAgMy4zOTQgICAgICAgICAgMSAgICAgICAgICAzLjM5NCAgICA2LjM5MyAgICAwLjAxMjYgXG5SZXNpZHVhbCAgICAgICA3MC4wOTAgICAgICAgIDEzMiAgICAgICAgICAwLjUzMSAgICAgICAgICAgICAgICAgICAgXG5Ub3RhbCAgICAgICAgICA3My40ODQgICAgICAgIDEzMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhcmFtZXRlciBFc3RpbWF0ZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICAgICAgICAgICBtb2RlbCAgICAgQmV0YSAgICBTdGQuIEVycm9yICAgIFN0ZC4gQmV0YSAgICAgIHQgICAgICAgIFNpZyAgICAgbG93ZXIgICAgdXBwZXIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgIChJbnRlcmNlcHQpICAgIDMuNzAwICAgICAgICAgMC4yMDAgICAgICAgICAgICAgICAgIDE4LjQ1NyAgICAwLjAwMCAgICAzLjMwNCAgICA0LjA5NyBcbmlwaXBfQWdyZWVhYmxlbmVzcyAgICAwLjAwNyAgICAgICAgIDAuMDAzICAgICAgICAwLjIxNSAgICAgMi41MjggICAgMC4wMTMgICAgMC4wMDEgICAgMC4wMTIgXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3RlcHdpc2UgU2VsZWN0aW9uIFN1bW1hcnkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQWRkZWQvICAgICAgICAgICAgICAgICAgIEFkai4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcblN0ZXAgICAgICAgICBWYXJpYWJsZSAgICAgICAgIFJlbW92ZWQgICAgIFItU3F1YXJlICAgIFItU3F1YXJlICAgICBDKHApICAgICAgICBBSUMgICAgICAgIFJNU0UgICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgIDEgICAgaXBpcF9BZ3JlZWFibGVuZXNzICAgIGFkZGl0aW9uICAgICAgIDAuMDQ2ICAgICAgIDAuMDM5ICAgIC0wLjU3ODAgICAgMjk5LjQzNDkgICAgMC43Mjg3ICAgIFxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
-<pre><code>Stepwise Selection Method   
----------------------------
-
-Candidate Terms: 
-
-1. ipip_Extraversion 
-2. ipip_Agreeableness 
-3. ipip_Conscientiousness 
-4. ipip_Neuroticism 
-5. ipip_Openness 
-
-We are selecting variables based on p value...
-
-
-Stepwise Selection: Step 1 
-
-+ ipip_Agreeableness 
-
-                        Model Summary                          
---------------------------------------------------------------
-R                       0.215       RMSE                0.729 
-R-Squared               0.046       Coef. Var          17.426 
-Adj. R-Squared          0.039       MSE                 0.531 
-Pred R-Squared          0.019       MAE                 0.526 
---------------------------------------------------------------
- RMSE: Root Mean Square Error 
- MSE: Mean Square Error 
- MAE: Mean Absolute Error 
-
-                               ANOVA                                
--------------------------------------------------------------------
-               Sum of                                              
-              Squares         DF    Mean Square      F        Sig. 
--------------------------------------------------------------------
-Regression      3.394          1          3.394    6.393    0.0126 
-Residual       70.090        132          0.531                    
-Total          73.484        133                                   
--------------------------------------------------------------------
-
-                                    Parameter Estimates                                      
---------------------------------------------------------------------------------------------
-             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
---------------------------------------------------------------------------------------------
-       (Intercept)    3.700         0.200                 18.457    0.000    3.304    4.097 
-ipip_Agreeableness    0.007         0.003        0.215     2.528    0.013    0.001    0.012 
---------------------------------------------------------------------------------------------
-
-
-
-No more variables to be added/removed.
-
-
-Final Model Output 
-------------------
-
-                        Model Summary                          
---------------------------------------------------------------
-R                       0.215       RMSE                0.729 
-R-Squared               0.046       Coef. Var          17.426 
-Adj. R-Squared          0.039       MSE                 0.531 
-Pred R-Squared          0.019       MAE                 0.526 
---------------------------------------------------------------
- RMSE: Root Mean Square Error 
- MSE: Mean Square Error 
- MAE: Mean Absolute Error 
-
-                               ANOVA                                
--------------------------------------------------------------------
-               Sum of                                              
-              Squares         DF    Mean Square      F        Sig. 
--------------------------------------------------------------------
-Regression      3.394          1          3.394    6.393    0.0126 
-Residual       70.090        132          0.531                    
-Total          73.484        133                                   
--------------------------------------------------------------------
-
-                                    Parameter Estimates                                      
---------------------------------------------------------------------------------------------
-             model     Beta    Std. Error    Std. Beta      t        Sig     lower    upper 
---------------------------------------------------------------------------------------------
-       (Intercept)    3.700         0.200                 18.457    0.000    3.304    4.097 
-ipip_Agreeableness    0.007         0.003        0.215     2.528    0.013    0.001    0.012 
---------------------------------------------------------------------------------------------
-
-                                  Stepwise Selection Summary                                    
------------------------------------------------------------------------------------------------
-                               Added/                   Adj.                                       
-Step         Variable         Removed     R-Square    R-Square     C(p)        AIC        RMSE     
------------------------------------------------------------------------------------------------
-   1    ipip_Agreeableness    addition       0.046       0.039    -0.5780    299.4349    0.7287    
------------------------------------------------------------------------------------------------</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
