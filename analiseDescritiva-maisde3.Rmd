@@ -21,6 +21,10 @@ library (rcompanion)
 library(readxl)
 library(car)
 library(lmtest)
+library(tidyverse)
+library(caret)
+library(leaps)
+library(olsrr)
 theme_set(theme_bw())
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -64,21 +68,29 @@ dados %>%
 
 ```{r}
 dadosEquipesGrandes <- dados%>%filter(projetoAtual!="Gertec - MDM",projetoAtual!="HP - Windows Device Drivers 2020", projetoAtual!="Ingeteam - Agile-Installer", projetoAtual!="Inovatic - MDA Middleware", projetoAtual!="Inovatic - SCM", projetoAtual!="Motorola - MOTOTRBO Application Explorer")
+```
+
+```{r}
+dadosEquipesGrandes %>%
+  group_by(projetoAtual) %>%
+  count()
 
 ```
+
+
 
 ```{r}
 
 #psych::describe(dados)
 
 #Média, Mediana, Desvio padrão, coeficiente de variação, minimo e máximo
-descr(dados, stats = c("mean", "med", "sd", "cv", "min", "max"), transpose = TRUE)
+descr(dadosEquipesGrandes, stats = c("mean", "med", "sd", "cv", "min", "max"), transpose = TRUE)
 
 ```
 
 ```{r}
 #summary
-dfSummary(dados)
+dfSummary(dadosEquipesGrandes)
 ```
 
 ```{r}
@@ -130,7 +142,7 @@ freq(dados$Role, order = "freq", rows = 1:5, headings = FALSE, report.nas = FALS
 ```
 
 ```{r}
-boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
+boxplot(dadosEquipesGrandes$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
 #boxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
 abline(h=1,col="red",lty=2)
 abline(h=2,col="red",lty=2)
@@ -142,7 +154,7 @@ abline(h=5,col="red",lty=2)
 ```
 ```{r}
 #boxplot(dados$tci_TeamVision, xlim = c(0, 2), ylim = c(0, 5))
-boxplot(dados$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
+boxplot(dadosEquipesGrandes$tci_TaskOrientation, xlim = c(0, 2), ylim = c(0, 5))
 abline(h=1,col="red",lty=2)
 abline(h=2,col="red",lty=2)
 abline(h=3,col="red",lty=2)
@@ -152,7 +164,7 @@ abline(h=5,col="red",lty=2)
 ```
 ```{r}
 #boxplot(dados$ , xlim = c(0, 2), ylim = c(0, 5))
-boxplot(dados$iptc, xlim = c(0, 2), ylim = c(0, 5))
+boxplot(dadosEquipesGrandes$iptc, xlim = c(0, 2), ylim = c(0, 5))
 abline(h=1,col="red",lty=2)
 abline(h=2,col="red",lty=2)
 abline(h=3,col="red",lty=2)
@@ -174,7 +186,7 @@ abline(h=5,col="red",lty=2)
 
 mar.orig <- par()$mar
 par(mar=c(9,5,3,0))
-boxplot(dados$tci_TeamVision, dados$tci_TaskOrientation, dados$tci_SupportForInovation, dados$tci_ParticipativeSafety, dados$iptc,
+boxplot(dadosEquipesGrandes$tci_TeamVision, dadosEquipesGrandes$tci_TaskOrientation, dadosEquipesGrandes$tci_SupportForInovation, dadosEquipesGrandes$tci_ParticipativeSafety, dadosEquipesGrandes$iptc,
 main = "Team climate factors’ scores",
 names = c("Vision", "Task Orientation", "Support for Inovation", "Participative Safety", "IPTC"),
 las = 1,
@@ -204,7 +216,7 @@ abline(h=5,col="red",lty=2)
 
 mar.orig <- par()$mar
 par(mar=c(9,5,3,0))
-boxplot(dados$ipip_Extraversion, dados$ipip_Agreeableness, dados$ipip_Conscientiousness, dados$ipip_Neuroticism,dados$ipip_Openness,
+boxplot(dadosEquipesGrandes$ipip_Extraversion, dadosEquipesGrandes$ipip_Agreeableness, dadosEquipesGrandes$ipip_Conscientiousness, dadosEquipesGrandes$ipip_Neuroticism,dadosEquipesGrandes$ipip_Openness,
 main = "Personality traits’ scores",
 names = c("Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "Openness"),
 las = 1,
@@ -316,29 +328,29 @@ ggqqplot(dados$ipip_Openness, main = "Density plot of ipip_Openness",
 #Shapiro-Wilk’s test 0 IPIP
 
 
-shapiro.test(dados$ipip_Extraversion)
+shapiro.test(dadosEquipesGrandes$ipip_Extraversion)
 
-shapiro.test(dados$ipip_Agreeableness)
+shapiro.test(dadosEquipesGrandes$ipip_Agreeableness)
 
-shapiro.test(dados$ipip_Conscientiousness)
+shapiro.test(dadosEquipesGrandes$ipip_Conscientiousness)
 
-shapiro.test(dados$ipip_Neuroticism)
+shapiro.test(dadosEquipesGrandes$ipip_Neuroticism)
 
-shapiro.test(dados$ipip_Openness)
+shapiro.test(dadosEquipesGrandes$ipip_Openness)
 ```
 ```{r}
 #Shapiro-Wilk’s test 0 TCI
 
 
-shapiro.test(dados$tci_TeamVision)
+shapiro.test(dadosEquipesGrandes$tci_TeamVision)
 
-shapiro.test(dados$tci_SupportForInovation)
+shapiro.test(dadosEquipesGrandes$tci_SupportForInovation)
 
-shapiro.test(dados$tci_TaskOrientation)
+shapiro.test(dadosEquipesGrandes$tci_TaskOrientation)
 
-shapiro.test(dados$tci_ParticipativeSafety)
+shapiro.test(dadosEquipesGrandes$tci_ParticipativeSafety)
 
-shapiro.test(dados$iptc)
+shapiro.test(dadosEquipesGrandes$iptc)
 
 ```
 
@@ -404,41 +416,18 @@ cor(selecionar, method = "kendall")
 
 ```{r}
 options(scipen = 999)
-plotNormalHistogram (dados$tci_TeamVision)
+plotNormalHistogram (dadosEquipesGrandes$tci_TeamVision)
 
-qqnorm (dados$tci_TeamVision,
+qqnorm (dadosEquipesGrandes$tci_TeamVision,
        ylab = "Sample Quantiles for Team Vision")
-qqline (dados$tci_TeamVision,
+qqline (dadosEquipesGrandes$tci_TeamVision,
        col = "red")
-shapiro.test(dados$tci_TeamVision)
-
-T_log = log(dados$tci_TeamVision)
-plotNormalHistogram(T_log)
-qqnorm (T_log,
-       ylab = "Sample Quantiles for Team Vision Log")
-qqline (T_log,
-       col = "red")
-shapiro.test(T_log)
-
-T_log10 = log10(dados$tci_TeamVision)
-plotNormalHistogram(T_log10)
-qqnorm (T_log10,
-       ylab = "Sample Quantiles for Team Vision Log 10")
-qqline (T_log10,
-       col = "blue")
-shapiro.test(T_log10)
-
-T_log2 = log2(dados$tci_TeamVision)
-plotNormalHistogram(T_log2)
-qqnorm (T_log2,
-       ylab = "Sample Quantiles for Team Vision Log 10")
-qqline (T_log2,
-       col = "blue")
-shapiro.test(T_log2)
+shapiro.test(log10(dadosEquipesGrandes$tci_TeamVision))
 
 
-T_tuk =  transformTukey (dados$tci_TeamVision,
-                     plotit = FALSE)
+T_tuk =  transformTukey (dadosEquipesGrandes$tci_TeamVision,
+                     plotit = TRUE)
+summary(T_tuk)
 plotNormalHistogram (T_tuk)
 shapiro.test(T_tuk)
 
@@ -832,8 +821,13 @@ cor(selecionar, method = "spearman")
 ```
 ```{r}
 
-selecionar = select(dados, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+selecionar = select(dadosEquipesGrandes, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
 cor(selecionar, method = "spearman")
+
+```
+```{r}
+selecionar = select(dadosEquipesGrandes, tci_TeamVision, tci_SupportForInovation, tci_TaskOrientation, tci_ParticipativeSafety, iptc, ipip_Extraversion, ipip_Agreeableness,ipip_Conscientiousness,ipip_Neuroticism,ipip_Openness)
+cor(selecionar, method = "pearson")
 
 ```
 
@@ -1100,5 +1094,17 @@ bptest(model)
 # Avalie a homogeneidade das variâncias
 plot(rstudent(model) ~ fitted(model), pch = 19)
 abline(h = 0, lty = 2)
+```
+
+
+```{r}
+# stepwise forward regression
+model <- lm(iptc ~ ., data = dadosEquipesGrandes)
+ols_step_forward_p(model, details = TRUE)
+```
+```{r}
+# stepwise forward regression
+model <- lm(iptc ~ ., data = dadosEquipesGrandes)
+ols_step_backward_p-(model)
 ```
 
