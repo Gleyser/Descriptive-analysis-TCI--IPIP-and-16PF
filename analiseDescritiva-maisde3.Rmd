@@ -1098,13 +1098,51 @@ abline(h = 0, lty = 2)
 
 
 ```{r}
-# stepwise forward regression
-model <- lm(iptc ~ ., data = dadosEquipesGrandes)
+# stepwise forward regression - IPTC
+model <- lm(iptc ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
 ols_step_forward_p(model, details = TRUE)
 ```
 ```{r}
-# stepwise forward regression
-model <- lm(iptc ~ ., data = dadosEquipesGrandes)
-ols_step_backward_p-(model)
+# stepwise forward regression - IPTC
+model <- lm(iptc ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_all_possible(model)
+
+```
+```{r}
+
+# stepwise forward regression - IPTC
+model <- lm(iptc ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_best_subset(model, details = TRUE)
+```
+```{r}
+
+# stepwise forward regression - IPTC
+model <- lm(iptc ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_both_p(model, details = TRUE)
+```
+
+
+```{r}
+# stepwise forward regression - TeamVision
+model <- lm(tci_TeamVision ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_forward_p(model, details = TRUE)
+```
+```{r}
+# stepwise forward regression - TeamVision
+model <- lm(tci_TeamVision ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_all_possible(model)
+
+```
+```{r}
+
+# stepwise forward regression - TeamVision
+model <- lm(tci_TeamVision ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_best_subset(model, details = TRUE)
+```
+```{r}
+
+# stepwise forward regression - TeamVision
+model <- lm(tci_TeamVision ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_both_p(model, details = TRUE)
 ```
 
