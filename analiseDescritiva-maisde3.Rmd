@@ -1146,3 +1146,27 @@ model <- lm(tci_TeamVision ~ ipip_Extraversion + ipip_Agreeableness + ipip_Consc
 ols_step_both_p(model, details = TRUE)
 ```
 
+```{r}
+# stepwise forward regression - TaskOrientation
+model <- lm(tci_TaskOrientation ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_forward_p(model, details = TRUE)
+```
+```{r}
+# stepwise forward regression - TaskOrientation
+model <- lm(tci_TaskOrientation ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_all_possible(model)
+
+```
+```{r}
+
+# stepwise forward regression - TaskOrientation
+model <- lm(tci_TaskOrientation ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_best_subset(model, details = TRUE)
+```
+```{r}
+
+# stepwise forward regression - TaskOrientation
+model <- lm(tci_TaskOrientation ~ ipip_Extraversion + ipip_Agreeableness + ipip_Conscientiousness + ipip_Neuroticism + ipip_Openness, data = dadosEquipesGrandes)
+ols_step_both_p(model, details = TRUE)
+```
+
